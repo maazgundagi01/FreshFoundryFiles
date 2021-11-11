@@ -7,22 +7,11 @@
     font-family: var(--comfortaa);
 }
 
-.nav nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-.nav a {
-    text-decoration: none;
-    color: black;
-}
-
-.nav ul li{
-    list-style-type: none;
-    padding: 0 10px;
-}
-
 .logo img {
-    width: 200px;
-    height: 48px;
+    width: 300px;
+    height: 72px;
+}
+
+.logo {
+    margin: auto;
 }
