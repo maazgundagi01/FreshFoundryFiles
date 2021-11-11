@@ -6,7 +6,25 @@
     
     --paragraphFont : 'Comfortaa', cursive;
 }
- 
+
+
+* {
+    --vietnam: 'Be Vietnam Pro', sans-serif;
+    --comfortaa: 'Comfortaa', cursive;
+    --cookie: 'Cookie', cursive;
+    --dancing-script: 'Dancing Script', cursive;
+    --engagement: 'Engagement', cursive;
+    --jost: 'Jost', sans-serif;
+    --kaushan: 'Kaushan Script', cursive;
+    --lobster: 'Lobster', cursive;
+    --lobster-two: 'Lobster Two', cursive;
+    --montserrat: 'Montserrat', sans-serif;
+    --rajdhani: 'Rajdhani', sans-serif;
+    --red-hat-display: 'Red Hat Display', sans-serif;
+    --sofia: 'Sofia', cursive;
+    --sora: 'Sora', sans-serif;
+}
+
 header {
     font-family: var(--headFont);
 }
