@@ -7,3 +7,18 @@
     font-family: --comfortaa;
 }
 
+.nav nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
