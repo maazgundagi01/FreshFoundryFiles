@@ -1,0 +1,46 @@
+Fresh Foundry
+Fonts Palette
+Logo:
+Lobster/ Lobster 2 /Dancing Script / Kaushan Script / Sofia/ Engagement
+Fresh Foundry/Fresh Foundry/
+Fresh Foundry/FreshFoundry/ 
+Fresh Foundry/Fresh Foundry
+Headings:
+Jost/ Red Hat Display/ Sora/ Vietnam Pro
+Paragraph
+Comfortaa Fresh Foundry/ Monsterrat Fresh Foundry
+ 
+Special:
+Rajdhani
+Special Hand: Cookie
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comfortaa:wght@300;400;500;600;700&family=Cookie&family=Dancing+Script:wght@400;500;600;700&family=Engagement&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+
+
+
+
+font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Engagement', cursive;
+font-family: 'Jost', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Sofia', cursive;
+font-family: 'Sora', sans-serif;
+
+
+
+
+
