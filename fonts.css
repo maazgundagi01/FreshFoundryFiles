@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comfortaa:wght@300;400;500;600;700&family=Cookie&family=Dancing+Script:wght@400;500;600;700&family=Engagement&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+/*Declaring Variables*/
+
+* {
+    --vietnam: 'Be Vietnam Pro', sans-serif;
+    --comfortaa: 'Comfortaa', cursive;
+    --cookie: 'Cookie', cursive;
+    --dancing-script: 'Dancing Script', cursive;
+    --engagement: 'Engagement', cursive;
+    --jost: 'Jost', sans-serif;
+    --kaushan: 'Kaushan Script', cursive;
+    --lobster: 'Lobster', cursive;
+    --lobster-two: 'Lobster Two', cursive;
+    --montserrat: 'Montserrat', sans-serif;
+    --rajdhani: 'Rajdhani', sans-serif;
+    --red-hat-display: 'Red Hat Display', sans-serif;
+    --sofia: 'Sofia', cursive;
+    --sora: 'Sora', sans-serif;
+}
