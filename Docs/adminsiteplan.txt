@@ -1,0 +1,13 @@
+DASHBOARD
+    Inventory (Accordian)
+        Fresh Produce
+        Frozen Foods
+        Meat
+        Dairy
+        Spices
+        Baked Goods
+        Beverages 
+    Orders
+    User
+    Queries
+
