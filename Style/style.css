@@ -18,7 +18,7 @@ header {
     background-color: var(--white);
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .logo img {
@@ -82,7 +82,7 @@ header {
     border: 1px solid var(--outlines);
     border-radius: 10px 0px 0px 10px;
     box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 600px;
+    width: 800px;
     height: 30px;
 }
 
