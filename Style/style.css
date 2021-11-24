@@ -17,6 +17,8 @@ header {
     box-shadow: .1px 0.1px 6px var(--black-01);
     background-color: var(--white);
     position: fixed;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .logo img {
@@ -27,7 +29,53 @@ header {
 .logo {
     width: 300px;
     height: auto;
-    margin: auto;
+}
+
+@import "compass/css3";
+
+.ico-mglass {
+  position:relative;
+  display:inline-block;
+  border-radius: 30px;
+  height: 8px;
+  width: 8px;
+  border: 2px solid var(--white);
+  padding: 5px;
+  margin: auto;
+}
+
+.ico-mglass:after {
+    content: "";
+    height: 2px;
+    width: 6px;
+    background: var(--white);
+    position:absolute;
+    top:10px;
+    left:8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.searchbar {
+    margin-top: 20px;
+}
+
+.searchbar button {
+    border-radius: 0px 10px 10px 0px;
+    border-color: transparent;
+    width: 35px;
+    height: 30px;
+    background-color: var(--logo-red);
+}
+
+.searchbar input {
+    border: 1px solid var(--outlines);
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 30px;
 }
 
 .content {
