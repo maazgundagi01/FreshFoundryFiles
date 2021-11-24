@@ -1,19 +1,26 @@
+@import "fonts.css";
+@import "colors.css";
+
 body{
-    background-color: #f6f6f6;
+    background-color: var(--g-whitebg);
     height: 100vh;
     width: 100vw;
 }
 .dashboard{
+    grid-area: "sidebar";
     width: 20vw;
     height: 98vh;
     background-color: var(--white);
     border-radius: 14px;
-    border: 1px solid black ;
 }
-.admin_ops{
+.adminops{
+    grid-area: "ops";
     width: 70vw;
     height: 98vh;
     background-color: var(--white);
     border-radius: 14px;
-    border: 1px solid black ;
+}
+main{
+    display: grid;
+    grid-template-areas: "sidebar ops ops";
 }
