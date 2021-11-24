@@ -11,14 +11,19 @@ body{
     width: 20vw;
     height: 98vh;
     background-color: var(--white);
-    border-radius: 14px;
+    border-radius: 9px;
+    margin-left: 2vw;
+    margin-top: 10vh;
+    box-shadow: var(--shadowbright);
 }
 .adminops{
     grid-area: "ops";
-    width: 70vw;
+    width: 75vw;
     height: 98vh;
     background-color: var(--white);
-    border-radius: 14px;
+    border-radius: 9px;
+    margin-top: 10vh;
+    box-shadow: var(--shadowbright);
 }
 main{
     display: grid;
