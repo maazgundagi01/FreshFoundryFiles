@@ -156,3 +156,31 @@ header {
     font-weight: bold;
 }
 
+.products {
+    position: relative;
+    top: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.products img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 2vh;
+    padding: .2em;
+    box-shadow: var(--shadowdeep);
+}
+
+.goods {
+    width: 150px;
+    height: 120px;
+    box-shadow: var(--shadowdeep);
+    padding-top: 2vh;
+}
+
+.searchbar-bottom {
+    position: relative;
+    top: 750px;
+    margin: 0 auto;
+}
