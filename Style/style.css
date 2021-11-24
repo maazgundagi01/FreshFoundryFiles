@@ -78,6 +78,10 @@ header {
         width: 500px;
         height: 30px;
     }
+
+    .searchbar input:focus {
+        outline: none;
+    }
 }
 
 @media (max-width: 720px) and (min-width: 400px) {
@@ -87,6 +91,10 @@ header {
         box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
         width: 200px;
         height: 30px;
+    }
+
+    .searchbar input:focus {
+        outline: none;
     }
 }
 
