@@ -189,7 +189,7 @@ header {
 
 .products {
     position: relative;
-    top: 700px;
+    top: 680px;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
@@ -221,9 +221,36 @@ header {
 
 .searchbar-bottom {
     position: relative;
-    top: 750px;
-    margin: 0 auto;
-    text-align: center;
+    top: 720px;
     display: flex;
+    justify-content: center;
 }
 
+.searchbar-bottom input{
+    width: 600px;
+    height: 5vh;
+    padding: 1em;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid var(--outlines)
+}
+
+.searchbar-bottom input:focus {
+    outline: none;
+}
+
+.searchbar-bottom p {
+    font-size: 2em;
+    padding-right: 1.5em;
+}
+
+.searchbar-bottom button {
+    height: 5vh;
+    width: 2.5vw;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--logo-red)
+}
+
+.searchbar-bottom i {
+    color: var(--white);
+}
