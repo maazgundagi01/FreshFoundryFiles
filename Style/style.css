@@ -172,6 +172,15 @@ header {
     box-shadow: var(--shadowdeep);
 }
 
+.products a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.products a:hover {
+    color: var(--black);
+}
+
 .goods {
     width: 150px;
     height: 120px;
