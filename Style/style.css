@@ -79,12 +79,34 @@ header {
     background-color: var(--logo-red);
 }
 
-.searchbar input {
-    border: 1px solid var(--outlines);
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 800px;
-    height: 30px;
+@media screen and (min-width: 1080px) {
+    .searchbar input {
+        border: 1px solid var(--outlines);
+        border-radius: 10px 0px 0px 10px;
+        box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 800px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 1080px) and (min-width: 720px) {
+    .searchbar input {
+        border: 1px solid var(--outlines);
+        border-radius: 10px 0px 0px 10px;
+        box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 500px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 720px) and (min-width: 400px) {
+    .searchbar input {
+        border: 1px solid var(--outlines);
+        border-radius: 10px 0px 0px 10px;
+        box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 200px;
+        height: 30px;
+    }
 }
 
 .navbar {
