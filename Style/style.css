@@ -52,6 +52,7 @@ header {
     position:absolute;
     top:10px;
     left:8px;
+    transform: rotate(45deg) ;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
