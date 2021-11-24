@@ -29,3 +29,10 @@ main{
     display: grid;
     grid-template-areas: "sidebar ops ops";
 }
+
+.dashitem{
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 20px;
+    margin-top:20px;
+}
