@@ -1,2 +1,2 @@
 var adminBtn = document.getElementById('admin-btn');
-adminBtn.style.display = "none";
+adminBtn.style.display = "block";
