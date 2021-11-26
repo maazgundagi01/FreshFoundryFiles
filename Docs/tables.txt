@@ -1,0 +1,15 @@
+Categories
+
+sr no
+products
+product_id
+description
+
+Fresh Produce
+
+sr no
+goods
+goods_id
+product_id
+price
+image
