@@ -1,15 +1,27 @@
-<?php
-
-$dsn = 'mysql:host=localhost;dbname=a4';
-$username = 'ff-admin';
-$password = '';
-
-
-try {
-    $db = new PDO($dsn,$username,$password);
-    // echo "Connection made to database";
-} catch (PDOException $e) {
-    $error_message = $e->getMessage();
-    echo $error_message;
-    exit();
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form label, form input, form textarea, form button {
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="execute.php" method="POST">
+            <label for="">Serial No.</label>
+            <input type="text" name="sr_no"><br>
+            <label for="">Product Name</label>
+            <input type="text" name="product_name"><br>
+            <label for="">Description</label>
+            <textarea name="product_desc" id="" cols="30" rows="2"></textarea><br>
+            <button type="submit">Insert</button>
+        </form>
+    </div>
+</body>
+</html>
