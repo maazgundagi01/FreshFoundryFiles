@@ -17,11 +17,14 @@ try {
 
 $sr_no = trim($_POST['sr_no']);
 $name = trim($_POST['product_name']);
+$id = trim($_POST['product_id']);
 $desc = trim($_POST['product_desc']);
 
-$query = "INSERT INTO categories VALUES ('$sr_no','$name','','$desc')";
+$query = "INSERT INTO categories VALUES ('$sr_no','$name','$id','$desc')";
 $stmt = $db->prepare($query);
 $stmt->execute();
-$stmt->closerCursor();
+$stmt->closeCursor();
+
+header('location:view.php');
 
 ?>

@@ -18,9 +18,11 @@
             <input type="text" name="sr_no"><br>
             <label for="">Product Name</label>
             <input type="text" name="product_name"><br>
+            <label for="">Product_id</label>
+            <input type="text" name="product_id" read_only><br>
             <label for="">Description</label>
             <textarea name="product_desc" id="" cols="30" rows="2"></textarea><br>
-            <button type="submit">Insert</button>
+            <button type="submit">Create</button>
         </form>
     </div>
 </body>
