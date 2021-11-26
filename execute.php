@@ -2,7 +2,7 @@
 <?php
 
 $dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'ff-admin';
+$username = 'root';
 $password = '';
 
 
