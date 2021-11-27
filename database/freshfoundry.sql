@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2021 at 10:01 PM
+-- Generation Time: Nov 27, 2021 at 05:41 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -33,7 +33,7 @@ CREATE TABLE `baked_goods` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -48,7 +48,7 @@ CREATE TABLE `beverages` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,6 +64,19 @@ CREATE TABLE `categories` (
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`sr_no`, `products`, `product_id`, `description`) VALUES
+(6, 'Baked Goods', 'ff-bg-06', 'Baked Goods and Bread'),
+(2, 'Frozen Foods', 'ff-ff-02', 'Frozen Products'),
+(1, 'Fresh Produce', 'ff-fp-01', 'Fresh Groceries and Vegetables'),
+(7, 'Beverages', 'ff-xb-07', 'Drinks and Beverages'),
+(4, 'Dairy', 'ff-xd-04', 'Dairy Products'),
+(3, 'Meat', 'ff-xm-03', 'Meat Products'),
+(5, 'Spices', 'ff-xs-05', 'Spices');
+
 -- --------------------------------------------------------
 
 --
@@ -76,7 +89,7 @@ CREATE TABLE `dairy` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -91,7 +104,7 @@ CREATE TABLE `fresh_produce` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -106,7 +119,7 @@ CREATE TABLE `frozen_foods` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,7 +134,7 @@ CREATE TABLE `meat` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -136,7 +149,7 @@ CREATE TABLE `spices` (
   `goods_id` varchar(255) NOT NULL,
   `prod_id` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
