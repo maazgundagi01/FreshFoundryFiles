@@ -42,9 +42,11 @@ else if($prod === 'beverages'){
 };
 
 $price = trim($_POST['price']);
-$target = "uploads/";
+$target = "./uploads/";
 $image = $_FILES["image"]["name"];
 $targetPath = $target.$image;
+
+move_uploaded_file($image, $targetPath);
 
 if (move_uploaded_file($image, $targetPath))  {
     $msg = "Image uploaded successfully";
@@ -112,70 +114,70 @@ if($prod_id === 'ff-xb-07'){
 $query1 = 'SELECT * FROM fresh_produce';
 $stmt = $db->prepare($query1);
 $stmt->execute();
-$stmt->closeCursor();
 $row1 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row1;
+var_dump($row1);
 echo "</pre>";
 
 
 $query2 = 'SELECT * FROM frozen_foods';
 $stmt = $db->prepare($query2);
 $stmt->execute();
-$stmt->closeCursor();
 $row2 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row2;
+var_dump($row2);
 echo "</pre>";
 
 
 $query3 = 'SELECT * FROM meat';
 $stmt = $db->prepare($query3);
 $stmt->execute();
-$stmt->closeCursor();
 $row3 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row3;
+var_dump($row3);
 echo "</pre>";
 
 
 $query4 = 'SELECT * FROM dairy';
 $stmt = $db->prepare($query4);
 $stmt->execute();
-$stmt->closeCursor();
 $row4 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row4;
+var_dump($row4);
 echo "</pre>";
 
 
 $query5 = 'SELECT * FROM spices';
 $stmt = $db->prepare($query5);
 $stmt->execute();
-$stmt->closeCursor();
 $row5 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row5;
+var_dump($row5);
 echo "</pre>";
 
 
 $query6 = 'SELECT * FROM baked_goods';
 $stmt = $db->prepare($query6);
 $stmt->execute();
-$stmt->closeCursor();
 $row6 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row6;
+var_dump($row6);
 echo "</pre>";
 
 
 $query7 = 'SELECT * FROM beverages';
 $stmt = $db->prepare($query7);
 $stmt->execute();
-$stmt->closeCursor();
 $row7 = $stmt->fetchALL(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
 echo "<pre>";
-echo $row7;
+var_dump($row7);
 echo "</pre>";
 
 ?>
