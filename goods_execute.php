@@ -42,23 +42,45 @@ else if($prod === 'beverages'){
 };
 
 $price = trim($_POST['price']);
-$target = "./uploads/";
-$image = $_FILES["image"]["name"];
-$targetPath = $target.$image;
 
-move_uploaded_file($image, $targetPath);
+// $image = $_FILES["image"]["name"];
+// $target = "./uploads/";
 
-if (move_uploaded_file($image, $targetPath))  {
-    $msg = "Image uploaded successfully";
+$statusMsg = '';
+
+// File upload path
+$targetDir = "uploads/";
+$image = basename($_FILES["image"]["name"]);
+$targetFilePath = $targetDir . $image;
+$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+
+if(isset($_POST["submit"]) && !empty($_FILES["image"]["name"])){
+    // Allow certain file formats
+    $allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
+        // Upload file to server
+        if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
+            // Insert image file name into database
+            // $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$image."', NOW())");
+            echo $image;
+            if($image){
+                $statusMsg = "The file ".$image. " has been uploaded successfully.";
+            }else{
+                $statusMsg = "File upload failed, please try again.";
+            } 
+        }else{
+            $statusMsg = "Sorry, there was an error uploading your file.";
+        }
+    }else{
+        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+    }
+}else{
+    $statusMsg = 'Please select a file to upload.';
 }
 
-else{
-    $msg = "Failed to upload image";
-}
+// Display status message
+echo $statusMsg;
 
-echo $msg;
-// echo $image;
-// echo $prod_id;
 
 if($prod_id === 'ff-fp-01'){
     $query = "INSERT INTO fresh_produce VALUES ('$sr_no','$goods','$g_id','$prod_id','$price','$image')";

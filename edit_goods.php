@@ -26,7 +26,7 @@
             <input type="text" name="price" id=""><br>
             <label for="">Image</label>
             <input type="file" name ="image"><br>
-            <button type="submit" name="upload">Insert</button>
+            <button type="submit" name="submit">Insert</button>
         </form>
     </div>
 </body>
