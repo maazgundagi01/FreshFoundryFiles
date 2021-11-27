@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor:none;
+}
+section
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 2rem;
+}
+span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    display: block;
+    font-size: 90%;
+}
+span::before
+{
+    content: 'O';
+    font-family: 'Sofia', cursive;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(147, 236, 127);
+    transform: scale(1.5);
+    transition: 2s;
+}
+span:hover::before
+{
+    color: rgb(255, 175, 175);
+    transform: scale(2.25);
+    transition:0s;
+    box-shadow: 0 0 px red,
+    0 0 2px rgba(255, 0, 0, 0.657),
+    0 0 2px rgba(255, 0, 0, 0.411),
+    0 0 2px rgba(255, 0, 0, 0.24);
+}
+form{
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 40%;
+    z-index: 9999;
+    background-color: white;
+    border: 2px solid rgba(128, 128, 128, 0.335);
+    border-radius: 9px;
+}
+

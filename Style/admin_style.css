@@ -6,16 +6,34 @@ body{
     height: 100vh;
     width: 100vw;
 }
-.dashboard{
-    grid-area: "sidebar";
-    width: 20vw;
-    height: 98vh;
-    background-color: var(--white);
-    border-radius: 9px;
-    margin-left: 2vw;
-    margin-top: 10vh;
-    box-shadow: var(--shadowbright);
-}
+    main{
+        display: grid;
+        grid-template-areas: "sidebar ops ops";
+    }
+        .dashboard{
+            grid-area: "sidebar";
+            width: 20vw;
+            height: 98vh;
+            background-color: var(--white);
+            border-radius: 9px;
+            margin-left: 2vw;
+            margin-top: 10vh;
+            box-shadow: var(--shadowbright);
+        }
+                .dashitem{
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding-left: 20px;
+                }
+                .dashhead{
+                    padding-left: 20px;
+                    padding-top: 20px;
+                    margin-bottom: 0;
+                    font-family: var(--red-hat-display);
+                }
+                .accordion-body > a {
+                    cursor: pointer;
+                }
 .adminops{
     grid-area: "ops";
     width: 75vw;
@@ -25,21 +43,13 @@ body{
     margin-top: 10vh;
     box-shadow: var(--shadowbright);
 }
-main{
-    display: grid;
-    grid-template-areas: "sidebar ops ops";
-}
-.dashitem{
-    cursor: pointer;
-    font-size: 16px;
-    padding-left: 20px;
-}
-.dashhead{
-    padding-left: 20px;
-    padding-top: 20px;
-    margin-bottom: 0;
-    font-family: var(--red-hat-display);
-}
-.accordion-body > a {
-    cursor: pointer;
-}
+    .actionForm{
+            border: 1px solid rgb(182, 182, 182);
+            border-radius: 9px;
+            padding: 2rem;
+            margin: 15px;
+        }
+                .formHead{
+                    font-family: var(--red-hat-display);
+                }
+       
