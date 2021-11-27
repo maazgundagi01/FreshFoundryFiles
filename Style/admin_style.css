@@ -39,5 +39,7 @@ main{
     padding-top: 20px;
     margin-bottom: 0;
     font-family: var(--red-hat-display);
-
+}
+.accordion-body > a {
+    cursor: pointer;
 }
