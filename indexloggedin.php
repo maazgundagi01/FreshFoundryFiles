@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 
 $dsn = 'mysql:host=localhost;dbname=freshfoundry';
 $username = 'root';
@@ -51,7 +49,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="nav">
         <nav class="navbar">
             <ul>
-                <li><a href="#">Hi, <?php echo ucfirst($user_cookie); ?></a></li>
+                <li><a href="#">Hi, <?php echo ucfirst($_COOKIE['user_cookie']); ?></a></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">My Cart</a></li>
                 <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
@@ -142,7 +140,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </footer>
 <?php
-if(in_array($user_cookie, $row[0])){
+if(in_array($_COOKIE['user_cookie'], $row[0])){
     echo '<script src="./Javascript/adminview.js"></script>';
 }
 ?>

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +26,7 @@ session_start();
         <div class="nav">
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Hi, <?php echo ucfirst($user_cookie);?></a></li>
+                    <li><a href="#">Hi, <?php echo ucfirst($_COOKIE['user_cookie']);?></a></li>
                     <li><a href="#">Orders</a></li>
                     <li><a href="#">My Cart</a></li>
                     <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
