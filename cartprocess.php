@@ -34,5 +34,5 @@ $PricePc = 499.99;
             echo "<tr><td>std_pc_qty<td><td>Qty: ".$_POST['PC']."x499.99</td><td>Total :".(int)$_POST['PC']*$PricePc."</td> </tr>";   
         }
          echo "  </table><p style=' width:60vw;border:3px solid green;'><b>Special Instructions for order?</b> ".$_POST["Instruction"]. "</p>";
-    }
+    }`  
 ?>
