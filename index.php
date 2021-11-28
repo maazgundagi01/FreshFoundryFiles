@@ -33,7 +33,7 @@
         </nav>
     </div>
 </header>
-<div class="adminaccessbutton" id="admin-btn"><a href="./Admin.html">A</a></div>
+<div class="adminaccessbutton" id="admin-btn"><a href="./lollipop.php">A</a></div>
 <div class="content">
     <section class="main-carousel">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -115,6 +115,9 @@
 <footer>
 
 </footer>
-<script src="./Javascript/adminview.js"></script>
+<script>
+    var adminBtn = document.getElementById('admin-btn');
+    adminBtn.style.display = "none";
+</script>
 </body>
 </html>
