@@ -36,19 +36,24 @@
         </div>
     </header>
    <!--LOGIN FORM-->
-   <form class="formlog" action="">
+   <form class="formlog" action="" method="POST">
       <label for="validationCustomUsername" class="form-label">Username</label>
       <div class="input-group">
         <span class="input-group-text" id="inputGroupPrepend">@</span>
         <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
       </div>
     </div>
-    <div class="col-md-6" style="padding-top: 10px;">
+    <div class="col-md-12" style="padding-top: 15px;">
       <label for="validationCustom03" class="form-label">Password</label>
       <input type="password" class="form-control" id="validationCustom03" required>
     </div>
-    <div class="col-md-6" style="padding-top: 10px;">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+    <div class="row g-3">
+      <div class="col-12 login-btn col" style="padding-top: 15px;">
+        <button class="btn btn-primary" type="submit" name="login">Log In</button>
+      </div>
+      <div class="col">
+        <p>New to Fresh Foundry? <a href="./signup.html" class="signup-link">Sign up here!</a></p>
+      </div>
     </div>
   </form>
 </body>

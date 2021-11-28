@@ -65,3 +65,9 @@ body{
         border-radius: 9px;
         padding: 2rem;
     }
+
+/*Login CSS*/
+
+.signup-link:visited {
+    color: blue;
+}
