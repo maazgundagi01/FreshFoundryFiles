@@ -5,21 +5,52 @@ $pass = trim($_POST['password']);
 
 $user_cookie = $user;
 
-setcookie("user_cookie", $user, time()+86400,"/");
+$dsn = 'mysql:host=localhost;dbname=freshfoundry';
+$username = 'root';
+$password = '';
 
-// echo '<pre>';
-// var_dump($row);
-// echo '</pre>';
+try {
+    $db = new PDO($dsn,$username,$password);
+    //echo "Connection made to database";
+} catch (PDOException $e) {
+    $error_message = $e->getMessage();
+    echo $error_message;
+    exit();
+};
 
-// var_dump($_COOKIE["user_cookie"]);
+$query = "SELECT username FROM users";
+$stmt = $db->prepare($query);
+$stmt->execute();
+$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-header('location:indexloggedin.php');
+foreach($row as $r){
+    if(in_array($user, $r)){
+        echo 'username - '.$user.' found.'.'<br>';
+        setcookie("user_cookie", $user, time()+86400,"/");
+        header('location:indexloggedin.php');
+        break;
+    }
+    else {
+        $query_admin = "SELECT username FROM admin_users";
+        $stmt = $db->prepare($query_admin);
+        $stmt->execute();
+        $row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($row2 as $r2){
+            if(in_array($user, $r2)){
+                setcookie("user_cookie", $user, time()+86400,"/");
+                header('location:indexloggedin.php');
+                break;
+            }
 
-// if($_COOKIE["user_cookie"]) {
-//     header('location:indexloggedin.php');
-// }
-// else {
-//     echo 'chal na mc';
-// }
+            else {
+                echo "<script>alert('invalid login'); window.location.href = 'login.php';</script>";
+            }
+        }
+    }
+};
+// setcookie("user_cookie", $user, time()+86400,"/");
+
+// header('location:indexloggedin.php');
 
 ?>
