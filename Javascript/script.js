@@ -1,5 +1,4 @@
-//var adminBtn = document.getElementById('admin-btn');
-//adminBtn.style.display = "block";
+
 document.addEventListener("DOMContentLoaded", function(){
 (function () {
     'use strict'
