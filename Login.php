@@ -36,7 +36,7 @@
         </div>
     </header>
    <!--LOGIN FORM-->
-   <form class="formlog" action="indexloggedin.php" method="POST">
+   <form class="formlog" action="loginexecute.php" method="POST">
       <label for="validationCustomUsername" class="form-label">Username</label>
       <div class="input-group">
         <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -57,6 +57,5 @@
     </div>
   </form>
 </body>
-<script src="./Javascript/script.js">
-</script>
+<script src="./Javascript/script.js"></script>
 </html>

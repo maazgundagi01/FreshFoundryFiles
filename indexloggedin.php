@@ -2,9 +2,6 @@
 session_start();
 
 
-$user = trim(strtolower($_POST['username']));
-$pass = trim($_POST['password']);
-
 $dsn = 'mysql:host=localhost;dbname=freshfoundry';
 $username = 'root';
 $password = '';
@@ -25,10 +22,6 @@ $query = "SELECT username FROM users";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// echo '<pre>';
-// var_dump($row);
-// echo '</pre>';
 
 ?>
 
@@ -58,7 +51,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="nav">
         <nav class="navbar">
             <ul>
-                <li><a href="#">Hi, <?php echo ucfirst($user); ?></a></li>
+                <li><a href="#">Hi, <?php echo ucfirst($user_cookie); ?></a></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">My Cart</a></li>
                 <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
@@ -66,7 +59,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </nav>
     </div>
 </header>
-<div class="adminaccessbutton" id="admin-btn"><a href="./Admin.html">A</a></div>
+<div class="adminaccessbutton" id="admin-btn"><a href="./lollipop.php">A</a></div>
 <div class="content">
     <section class="main-carousel">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -149,7 +142,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </footer>
 <?php
-if(in_array($user, $row[0])){
+if(in_array($user_cookie, $row[0])){
     echo '<script src="./Javascript/adminview.js"></script>';
 }
 ?>

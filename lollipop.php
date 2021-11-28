@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
+            <a href="indexloggedin.php"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
         </div>
         <div class="shadow-box">
             <div class="searchbar">
@@ -25,7 +29,7 @@
         <div class="nav">
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Hi, <?php echo ucfirst($user_cookie);?></a></li>
                     <li><a href="#">Orders</a></li>
                     <li><a href="#">My Cart</a></li>
                     <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
