@@ -159,6 +159,10 @@ header {
     color: black;
 }
 
+.navbar a:hover {
+    color: #000;
+}
+
 .cart-png {
     width: 20px;
     height: 17px;
