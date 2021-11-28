@@ -12,6 +12,8 @@ setcookie($user_cookie, $user, time() + (86400), "/");
 // var_dump($row);
 // echo '</pre>';
 
-header('location:indexloggedin.php');
+echo $user_cookie;
+
+// header('location:indexloggedin.php');
 
 ?>
