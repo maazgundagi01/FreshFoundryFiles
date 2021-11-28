@@ -46,56 +46,55 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="nav">
         <nav class="navbar">
             <ul>
-                <li><a href=".
-                <?php //echo ucfirst($_COOKIE['user_cookie']);
-                foreach($row as $r){
-                    if(in_array($_COOKIE["user_cookie"], $r)){
+                <li><a href="<?php
+                    $newArray = array();
+                    foreach($row as $r){
+                        $newArray[] = $r['username'];
+                    };
+                    if(in_array($_COOKIE["user_cookie"], $newArray)){
                         echo '#';
-                        break;
                     }
                     else {
                         $query_admin = "SELECT username FROM admin_users";
                         $stmt = $db->prepare($query_admin);
                         $stmt->execute();
                         $row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                        
+                        $newArray2 = array();
                         foreach($row2 as $r2){
-                            if(in_array($_COOKIE["user_cookie"], $r2)){
-                                echo '#';
-                                break;
+                            $newArray2[] = $r2['username'];
                             }
-                
+                            
+                            if(in_array($_COOKIE["user_cookie"], $newArray2)){
+                                echo '#';
+                            }
                             else {
                                 echo "Login.php";
                             }
-                        }
-                    }
-                };
-                ?>."><?php //echo ucfirst($_COOKIE['user_cookie']);
-                foreach($row as $r){
-                    if(in_array($_COOKIE["user_cookie"], $r)){
-                        echo 'Hi, '.ucfirst($_COOKIE['user_cookie']);
-                        break;
-                    }
-                    else {
-                        $query_admin = "SELECT username FROM admin_users";
-                        $stmt = $db->prepare($query_admin);
-                        $stmt->execute();
-                        $row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                        
-                        foreach($row2 as $r2){
-                            if(in_array($_COOKIE["user_cookie"], $r2)){
-                                echo 'Hi, '.ucfirst($_COOKIE['user_cookie']);
-                                break;
+                        };?>"><?php
+                            $newArray = array();
+                            foreach($row as $r){
+                                $newArray[] = $r['username'];
+                            };
+                            if(in_array($_COOKIE["user_cookie"], $newArray)){
+                                echo 'Hi, '.ucfirst($_COOKIE["user_cookie"]);
                             }
-                
                             else {
-                                echo "Login";
-                            }
-                        }
-                    }
-                };
-                ?></a></li>
+                                $query_admin = "SELECT username FROM admin_users";
+                                $stmt = $db->prepare($query_admin);
+                                $stmt->execute();
+                                $row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                $newArray2 = array();
+                                foreach($row2 as $r2){
+                                    $newArray2[] = $r2['username'];
+                                }
+                                    
+                                if(in_array($_COOKIE["user_cookie"], $newArray2)){
+                                    echo 'Hi, '.ucfirst($_COOKIE["user_cookie"]);
+                                }
+                                else {
+                                    echo "Login";
+                                }
+                                };?></a></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">My Cart</a></li>
                 <!-- <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li> -->
@@ -187,16 +186,20 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </footer>
 <?php
-// if(in_array($_COOKIE['user_cookie'], $row)){
-//     echo '<script src="./Javascript/adminview.js"></script>';
-// }
-
-foreach($row as $r){
-    if(in_array($_COOKIE["user_cookie"], $r)){
-        echo '<script src="./Javascript/adminview.js"></script>';
-        break;
-    };
-};
+$query_admin = "SELECT username FROM admin_users";
+$stmt = $db->prepare($query_admin);
+$stmt->execute();
+$row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$newArray2 = array();
+foreach($row2 as $r2){
+    $newArray3[] = $r2['username'];
+}
+if(in_array($_COOKIE["user_cookie"], $newArray3)){
+    echo '<script>var adminBtn = document.getElementById(\'admin-btn\'); adminBtn.style.display = "block";</script>';
+}
+else {
+    echo '<script>var adminBtn = document.getElementById(\'admin-btn\'); adminBtn.style.display = "none";</script>';
+}
 ?>
 </body>
 </html>
