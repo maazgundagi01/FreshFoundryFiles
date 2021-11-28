@@ -13,11 +13,13 @@ setcookie("user_cookie", $user, time()+86400,"/");
 
 // var_dump($_COOKIE["user_cookie"]);
 
-if($_COOKIE["user_cookie"]) {
-    header('location:indexloggedin.php');
-}
-else {
-    echo 'chal na mc';
-}
+header('location:indexloggedin.php');
+
+// if($_COOKIE["user_cookie"]) {
+//     header('location:indexloggedin.php');
+// }
+// else {
+//     echo 'chal na mc';
+// }
 
 ?>

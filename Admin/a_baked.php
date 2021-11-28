@@ -39,7 +39,7 @@
         <!--DASHBOARD-->
         <div class="dashboard">
             <h1 class="dashhead">
-                Dashboard
+            <a href="../lollipop.php">Dashboard</a>
             </h1>
             <!--Dashboard ITEM 1 - Inventory-->
             <div class="accordion accordion-flush">
