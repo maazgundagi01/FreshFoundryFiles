@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2021 at 05:41 AM
+-- Generation Time: Nov 28, 2021 at 01:55 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `freshfoundry`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_users`
+--
+
+CREATE TABLE `admin_users` (
+  `sr_no` int(11) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin_users`
+--
+
+INSERT INTO `admin_users` (`sr_no`, `username`, `password`, `name`, `email`) VALUES
+(3, 'admin-test', 'test', 'test', 'test@gmail.com'),
+(4, 'admin-test1', 'test', 'test', 'test@gmail.com'),
+(6, 'admin-test2', 'test', 'test', 'test@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -152,9 +175,40 @@ CREATE TABLE `spices` (
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `sr_no` int(111) NOT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`sr_no`, `first_name`, `last_name`, `username`, `password`, `email`) VALUES
+(2, 'test', 'test', 'user-test', 'test', 'test@gmail.com'),
+(3, 'test', 'test', 'user-test2', 'test', 'test@gmail.com'),
+(4, 'test', 'test', 'user-test3', 'test', 'test@gmail.com');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin_users`
+--
+ALTER TABLE `admin_users`
+  ADD PRIMARY KEY (`sr_no`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `baked_goods`
@@ -210,6 +264,29 @@ ALTER TABLE `meat`
 ALTER TABLE `spices`
   ADD PRIMARY KEY (`goods_id`),
   ADD KEY `prod_id` (`prod_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`sr_no`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin_users`
+--
+ALTER TABLE `admin_users`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `sr_no` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
