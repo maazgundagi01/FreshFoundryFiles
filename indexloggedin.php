@@ -1,3 +1,37 @@
+<?php
+session_start();
+
+
+$user = trim(strtolower($_POST['username']));
+$pass = trim($_POST['password']);
+
+$dsn = 'mysql:host=localhost;dbname=freshfoundry';
+$username = 'root';
+$password = '';
+
+// echo $user;
+// echo $pass;
+
+try {
+    $db = new PDO($dsn,$username,$password);
+    //echo "Connection made to database";
+} catch (PDOException $e) {
+    $error_message = $e->getMessage();
+    echo $error_message;
+    exit();
+};
+
+$query = "SELECT username FROM users";
+$stmt = $db->prepare($query);
+$stmt->execute();
+$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// echo '<pre>';
+// var_dump($row);
+// echo '</pre>';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +47,7 @@
 <body>
 <header>
     <div class="logo">
-        <a href="index.html"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
+        <a href="#"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
     </div>
     <div class="shadow-box">
         <div class="searchbar">
@@ -24,7 +58,7 @@
     <div class="nav">
         <nav class="navbar">
             <ul>
-                <li><a href="./Login.html">Login</a></li>
+                <li><a href="#">Hi, <?php echo ucfirst($user); ?></a></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">My Cart</a></li>
                 <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
@@ -114,6 +148,10 @@
 <footer>
 
 </footer>
-<script src="./Javascript/script.js"></script>
+<?php
+if(in_array($user, $row[0])){
+    echo '<script src="./Javascript/adminview.js"></script>';
+}
+?>
 </body>
 </html>
