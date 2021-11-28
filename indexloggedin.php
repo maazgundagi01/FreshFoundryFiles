@@ -50,10 +50,10 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <nav class="navbar">
             <ul>
                 <li><a href="#">Hi, <?php echo ucfirst($_COOKIE['user_cookie']); ?></a></li>
-                <li><a href="./sessionend.php">Sign Out</a></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">My Cart</a></li>
-                <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
+                <!-- <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li> -->
+                <li><a href="./sessionend.php">Sign Out</a></li>
             </ul>
         </nav>
     </div>
