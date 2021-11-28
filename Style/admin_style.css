@@ -52,4 +52,16 @@ body{
                 .formHead{
                     font-family: var(--red-hat-display);
                 }
-       
+
+
+    .formlog{
+        position: fixed;
+        top: 25%;
+        left: 10%;
+        width: 40%;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.192);
+        border-radius: 9px;
+        padding: 2rem;
+    }

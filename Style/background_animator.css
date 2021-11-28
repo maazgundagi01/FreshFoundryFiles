@@ -46,14 +46,14 @@ span:hover::before
     0 0 2px rgba(255, 0, 0, 0.411),
     0 0 2px rgba(255, 0, 0, 0.24);
 }
-form{
+.actionform{
     position: fixed;
     top: 20%;
     left: 5%;
     width: 40%;
     z-index: 9999;
     background-color: white;
-    border: 2px solid rgba(128, 128, 128, 0.335);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.192);
     border-radius: 9px;
 }
 
