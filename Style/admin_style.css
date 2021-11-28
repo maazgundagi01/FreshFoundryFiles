@@ -37,7 +37,9 @@ body{
 .adminops{
     grid-area: "ops";
     width: 75vw;
-    height: 98vh;
+    height: fit-content;
+    min-height: 98vh;
+    margin-bottom: 10vh;
     background-color: var(--white);
     border-radius: 9px;
     margin-top: 10vh;
