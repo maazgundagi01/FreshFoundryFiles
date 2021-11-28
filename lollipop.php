@@ -51,13 +51,13 @@
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                            <a>Fresh Produce</a> <br/>
-                            <a>Frozen Foods</a> <br/>
-                            <a>Meat</a> <br/>
-                            <a>Dairy</a> <br/>
-                            <a>Spices</a> <br/>
-                            <a>Baked Goods</a> <br/>
-                            <a>Beverages </a> <br/>
+                            <a href="./Admin/a_fresh.php">Fresh Produce</a> <br/>
+                            <a href="./Admin/a_frozen.php">Frozen Foods</a> <br/>
+                            <a href="./Admin/a_meat.php">Meat</a> <br/>
+                            <a href="./Admin/a_dairy.php">Dairy</a> <br/>
+                            <a href="./Admin/a_spices.php">Spices</a> <br/>
+                            <a href="./Admin/a_baked.php">Baked Goods</a> <br/>
+                            <a href="./Admin/a_beverages.php">Beverages </a> <br/>
                     </div>
                      </div>
                 </div>
