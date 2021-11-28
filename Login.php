@@ -52,7 +52,7 @@
         <button class="btn btn-primary" type="submit" name="login">Log In</button>
       </div>
       <div class="col">
-        <p>New to Fresh Foundry? <a href="./signup.html" class="signup-link">Sign up here!</a></p>
+        <p>New to Fresh Foundry? <a href="./signup.php" class="signup-link">Sign up here!</a></p>
       </div>
     </div>
   </form>
