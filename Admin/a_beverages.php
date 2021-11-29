@@ -47,7 +47,7 @@
                       Inventory
                     </h2>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseOne" class="accordion-collapse collapse sidebar" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <a href="./a_fresh.php">Fresh Produce</a> <br/>
                         <a href="./a_frozen.php">Frozen Foods</a> <br/>
@@ -80,7 +80,6 @@
 
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
-            <h1>bev</h1>
             <!--Form Action => execute.php method POST-->
             <form class="actionForm" action="execute.php" method="POST">
                 <h1 class="formHead">Add Products</h1>

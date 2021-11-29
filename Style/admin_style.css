@@ -68,6 +68,32 @@ body{
         padding: 2rem;
     }
 
+.dashhead a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.dashhead a:hover {
+    color: black !important;
+}
+
+.dashhead a:visited {
+    color: black !important;
+}
+
+.sidebar a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.siderbar a:hover {
+    color: black !important;
+}
+
+.sidebar a:visited {
+    color: #000 !important;
+}
+
 /*Login CSS*/
 
 .signup-link:visited {
