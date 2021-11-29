@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="../Style/admin_style.css">
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../style/admin_style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e7083138fd.js" crossorigin="anonymous"></script>
@@ -47,7 +47,7 @@
                       Inventory
                     </h2>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseOne" class="accordion-collapse collapse custom-sidebar" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <a href="./a_fresh.php">Fresh Produce</a> <br/>
                         <a href="./a_frozen.php">Frozen Foods</a> <br/>
@@ -80,7 +80,6 @@
 
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
-            <h1>fre</h1>
             <!--Form Action => execute.php method POST-->
             <form class="actionForm" action="execute.php" method="POST">
                 <h1 class="formHead">Add Products</h1>
@@ -102,7 +101,7 @@
                         <input class="form-control"  name="Image" type="file" id="formFile">
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 custom-margin-15">
                         <label for="descriptionInput" class="form-label opsFormIp4">Example textarea</label>
                         <textarea name="product_desc" class="form-control" id="descriptionInput" rows="3"></textarea>
                     </div>

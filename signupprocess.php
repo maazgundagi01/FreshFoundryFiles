@@ -23,4 +23,6 @@ $query = "INSERT INTO users VALUES ('','$first_name','$last_name','$username','$
 $stmt = $db->prepare($query);
 $stmt->execute();
 $stmt->closeCursor();
+
+header('location:login.php');
 ?>
