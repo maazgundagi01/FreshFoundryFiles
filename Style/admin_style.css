@@ -98,6 +98,10 @@ body{
     margin-top: 15px !important;
 }
 
+.dashboard .dashitem {
+    padding-bottom: .5em;
+}
+
 /*Login CSS*/
 
 .signup-link:visited {

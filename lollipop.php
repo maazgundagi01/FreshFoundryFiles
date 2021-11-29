@@ -59,14 +59,14 @@
                     </div>
                      </div>
                 </div>
-              </div>
-              <!--Dashboard ITEM 2 - Orders -->
-              <h2 class="dashitem">
-                  Orders
-              </h2>
-              <!--Dashboard ITEM 3 - Users -->
-              <h2 class="dashitem">
-                Users
+            </div>
+            <!--Dashboard ITEM 2 - Orders -->
+            <h2 class="dashitem">
+                Orders
+            </h2>
+            <!--Dashboard ITEM 3 - Users -->
+            <h2 class="dashitem">
+            Users
             </h2>
             <!--Dashboard ITEM 4 - Queries -->
             <h2 class="dashitem">
