@@ -81,17 +81,21 @@ body{
     color: black !important;
 }
 
-.sidebar a {
+.custom-sidebar a {
     text-decoration: none !important;
     color: black !important;
 }
 
-.siderbar a:hover {
+.custom-sidebar a:hover {
     color: black !important;
 }
 
-.sidebar a:visited {
+.custom-sidebar a:visited {
     color: #000 !important;
+}
+
+.custom-margin {
+    margin-top: 10px;
 }
 
 /*Login CSS*/
