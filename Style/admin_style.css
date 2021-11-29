@@ -94,8 +94,8 @@ body{
     color: #000 !important;
 }
 
-.custom-margin {
-    margin-top: 10px;
+.custom-margin-15 {
+    margin-top: 15px !important;
 }
 
 /*Login CSS*/
