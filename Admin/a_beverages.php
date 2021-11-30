@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
+            <a href="../indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
         </div>
         <div class="shadow-box">
             <div class="searchbar">

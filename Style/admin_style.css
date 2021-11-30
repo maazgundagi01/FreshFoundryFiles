@@ -69,33 +69,33 @@ body{
     }
 
 .dashhead a {
-    text-decoration: none !important;
-    color: black !important;
+    text-decoration: none /*!important*/;
+    color: black /*!important*/;
 }
 
 .dashhead a:hover {
-    color: black !important;
+    color: black /*!important*/;
 }
 
 .dashhead a:visited {
-    color: black !important;
+    color: black /*!important*/;
 }
 
 .custom-sidebar a {
-    text-decoration: none !important;
-    color: black !important;
+    text-decoration: none /*!important*/;
+    color: black /*!important*/;
 }
 
 .custom-sidebar a:hover {
-    color: black !important;
+    color: black /*!important*/;
 }
 
 .custom-sidebar a:visited {
-    color: #000 !important;
+    color: #000 /*!important*/;
 }
 
 .custom-margin-15 {
-    margin-top: 15px !important;
+    margin-top: 15px /*!important*/;
 }
 
 .dashboard .dashitem {
