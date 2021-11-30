@@ -260,3 +260,8 @@ header {
 .searchbar-bottom i {
     color: var(--white);
 }
+
+.card_trial{
+    position: fixed;
+    top: 50vh;
+}
