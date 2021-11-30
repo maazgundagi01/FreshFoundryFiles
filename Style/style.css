@@ -262,6 +262,5 @@ header {
 }
 
 .card_trial{
-    position: fixed;
-    top: 50vh;
+    padding-top: 3rem;
 }
