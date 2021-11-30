@@ -17,7 +17,15 @@
             <label for="">Serial No.</label>
             <input type="text" name="sr_no"><br>
             <label for="">Product Category</label>
-            <input type="text" name="prod_name"><br>
+            <select name="prod_name" id="">
+                <option value="fresh produce">Fresh Produce</option>
+                <option value="frozen foods">Frozen foods</option>
+                <option value="Meat">Meat</option>
+                <option value="Dairy">Dairy</option>
+                <option value="spices">Spices</option>
+                <option value="baked goods">Baked Goods</option>
+                <option value="Beverages">Beverages</option>
+            </select><br>
             <label for="">Good's Name</label>
             <input type="text" name="goods_name"><br>
             <label for="">Goods ID</label>
