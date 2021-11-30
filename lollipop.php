@@ -81,22 +81,22 @@
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
             <!--Form Action => execute.php method POST-->
-            <form class="actionForm" action="execute.php" method="POST">
-                <h1 class="formHead">Add Products</h1>
+            <!-- <form class="actionForm" action="execute.php" method="POST">
+                <h1 class="formHead">Add Products</h1> -->
                 <!--Name Input-->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="mb-3 col">
                         <label for="nameField" class="form-label opsFormIp1">Name</label>
                         <input type="text" name="product_name" class="form-control" id="nameInput" placeholder="Example input placeholder">
-                    </div>
+                    </div> -->
                 <!--Price-->
-                <div class="row">
+                <!-- <div class="row">
                     <div class=" col">
                         <label for="priceField" class="form-label opsFormIp1">Price</label>
                         <input type="text" name="product_price" class="form-control" id="nameInput" placeholder="Example input placeholder">
-                    </div>
+                    </div> -->
                 <!--Image Input-->
-                    <div class=" col ">
+                    <!-- <div class=" col ">
                         <label for="formFile" class="form-label opsFormIp3">Image</label>
                         <input class="form-control"  name="Image" type="file" id="formFile">
                     </div>
@@ -106,7 +106,17 @@
                         <textarea name="product_desc" class="form-control" id="descriptionInput" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn-primary mb-5" style=" width:10vh; margin-left:1rem ; padding: 5px; border-radius: 5px;" >Submit</button>
-            </form>
+            </form> -->
+            <div>
+                <div class="welcome-admin" style="text-align: center;margin-top: 2em;">
+                    <h1>Welcome <span><?php echo ucfirst($_COOKIE['user_cookie']);?></span> to the Dashboard</h1><br>
+                    <p>Please select a category on the left to begin updating!</p>
+                </div>
+                <div class="system-updates" style="text-align: center; position: relative; top: 40vh;">
+                    <h1>What's new!</h1><br>
+                    <p>All updates to our system will show here...</p>
+                </div>
+            </div>
         </div>
     </main>
 </body>
