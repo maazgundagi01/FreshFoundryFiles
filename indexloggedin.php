@@ -129,43 +129,43 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <section class="categories">
         <div class="products">
-            <a href="./User/fresh.php">
+            <a href="./users/fresh.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Fresh Produce</p>
                 </div>
             </a>
-            <a href="./User/frozen.php">
+            <a href="./users/frozen.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Frozen Foods</p>
                 </div>
             </a>
-            <a href="./User/meat.php">
+            <a href="./users/meat.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Meat</p>
                 </div>
             </a>
-            <a href="./User/dairy.php">
+            <a href="./users/dairy.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Dairy</p>
                 </div>
             </a>
-            <a href="./User/spices.php">
+            <a href="./users/spices.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Spices</p>
                 </div>
             </a>
-            <a href="./User/baked.php">
+            <a href="./users/baked.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Baked Goods</p>
                 </div>
             </a>
-            <a href="./User/beverages.php">
+            <a href="./users/beverages.php">
                 <div class="goods">
                     <img src="./Assets/Images/heart.png" alt="">
                     <p>Beverages</p>

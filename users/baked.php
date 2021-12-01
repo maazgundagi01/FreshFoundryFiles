@@ -13,7 +13,7 @@
 <body>
 <header>
     <div class="logo">
-        <a href="index.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
+        <a href="../index.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
     </div>
     <div class="shadow-box">
         <div class="searchbar">
