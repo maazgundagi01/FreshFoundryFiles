@@ -78,7 +78,7 @@ $stmt->execute();
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo '<table><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
 foreach ($data as $row) {
-    echo '<tr >'.'<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td><td> <h3>'.$row['good_name']."</h3></td><td><h5>Price: $". $row['good_price'].'</h5></td><td></td><td><input type="submit" name="submit" value="Update Cart"/></td></tr>';
+    echo '<tr >'.'<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td><td> <h3>'.$row['good_name']."</h3></td><td><h5>Price: $". $row['good_price'].'</h5></td><td><input type="button" id="minus"></td><td><input type="submit" name="submit" value="Update Cart"/></td></tr>';
 }
 echo '</table>';
 $stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
