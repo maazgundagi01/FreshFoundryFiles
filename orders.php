@@ -43,13 +43,13 @@
         </h1>
         <!--Dashboard ITEM 1 - Inventory-->
             <div class="accordion-body" style="text-decoration:none;">
-                <a  href="./fresh.php">Fresh Produce</a><br/>
-                <a href="./frozen.php">Frozen Foods</a><br/>
-                <a href="./meat.php">Meat</a><br/>
-                <a href="./dairy.php">Dairy</a><br/>
-                <a href="./spices.php">Spices</a><br/>
-                <a href="./baked.php">Baked Goods</a><br/>
-                <a href="./beverages.php">Beverages </a><br/>
+                <a  href="./users/fresh.php">Fresh Produce</a><br/>
+                <a href="./users/frozen.php">Frozen Foods</a><br/>
+                <a href="./users/meat.php">Meat</a><br/>
+                <a href="./users/dairy.php">Dairy</a><br/>
+                <a href="./users/spices.php">Spices</a><br/>
+                <a href="./users/baked.php">Baked Goods</a><br/>
+                <a href="./users/beverages.php">Beverages </a><br/>
             </div>
         </h2>
     </div>
@@ -63,19 +63,38 @@
 
                 $cart_user = $_COOKIE["user_cookie"]."orders";
 
-                $query = "SELECT * FROM $cart_user";
+                $query = "SHOW TABLES LIKE '%orders%'";
                 $stmt = $db->prepare($query);
                 $stmt->execute();
                 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                echo '<div class=\'order-page\'>';
-                echo '<p class=\'orders-head\'>My order</p><table>';
-                foreach($row as $r){
-                    echo '<tr><td>'.$r['good_image'].'</td>';
-                    echo '<td>'.$r['good_name'].'</td>';
-                    echo '<td>'.$r['good_price'].'</td>';
+                $newarray = array();
+
+                foreach($row as $r) {
+                    $newarray[] = $r['Tables_in_freshfoundry (%orders%)'];
                 };
-                echo '</table></div>';
+
+                if(in_array($cart_user,$newarray)){
+                    $query = "SELECT * FROM $cart_user";
+                    $stmt = $db->prepare($query);
+                    $stmt->execute();
+                    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    echo '<div class=\'order-page\'>';
+                    echo '<p class=\'orders-head\'>My order</p><table>';
+                    foreach($row as $r){
+                        echo '<tr><td><img style=\'width: 200px; height: 200px; object-fit:contain;\' src=\'./uploads/'.$r['good_image'].'\'></td>';
+                        echo '<td>'.$r['good_name'].'</td>';
+                        echo '<td>'.$r['good_price'].'</td>';
+                    };
+                    echo '</table></br>';
+                    echo '<div><p>Delivering To : '.$r['user_address'].'</p></div>';
+                    echo '</div>';
+                }
+                else {
+                    echo 'You have not placed any orders recently,&nbsp;<span><a href=\'indexloggedin.php\'>Click Here</a><span> to shop.';
+                }
+                
             ?>
         </div>
     </div>
