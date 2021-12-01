@@ -15,7 +15,7 @@
 <body>
 <header>
     <div class="logo">
-        <a href="../indexloggedin.php"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
+        <a href="./indexloggedin.php"><img src="./Assets/Images/FreshLogo0.3.png" alt=""></a>
     </div>
     <div class="shadow-box">
         <div class="searchbar">
@@ -27,7 +27,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="#">Hi, <?php echo ucfirst($_COOKIE['user_cookie']);?></a></li>
-                <li><a href="./cart.php">My Cart</a></li>
+                    <li><a href="./orders.php">Orders</a></li>
+                    <li><a href="./users/chulbul.php">My Cart</a></li>
                 <li><a href="./sessionend.php">Sign Out</a></li>
             </ul>
         </nav>

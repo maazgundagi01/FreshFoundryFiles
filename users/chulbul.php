@@ -74,25 +74,26 @@ if($_COOKIE["user_cookie"]) {
 $cart_user = $_COOKIE["user_cookie"];
 
 $stmt = $db->prepare("SELECT * FROM $cart_user");
-$stmt->execute(); 
-$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
-foreach ($data as $row) {
-    echo '<tr >'.
-    '<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td>
-    <td><h5>'.$row['good_name']."</h5></td>
-    <td><h5>Price: $".$row['good_price'].'</h5></td>
-    <td><input value="'. $row['sr_no'].'" name="sr_no" type="hidden"><input type="submit" name="submit" value=" Remove"/></td></tr>';
-}
-echo '';
-$stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
-$stmt->execute(); 
-$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
- foreach ($data as $row) {
- echo '<tr><td><h5>Total:</h5></td><td></td><td></td><td><h2>$'.$row['totalPrice']."</h2></td></tr>";
-}
-echo '</form></table></div><form action="pewpewuser.php" method="POST"> <textarea name="user_address"></textarea><input name="submit" type="submit"></form>' ;
-}
+    $stmt->execute(); 
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
+    foreach ($data as $row) {
+        echo '<tr >'.
+        '<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td>
+        <td><h5>'.$row['good_name']."</h5></td>
+        <td><h5>Price: $".$row['good_price'].'</h5></td>
+        <td><input value="'. $row['sr_no'].'" name="sr_no" type="hidden"><input type="submit" name="submit" value=" Remove"/></td></tr>';
+    }
+    echo '';
+    $stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
+    $stmt->execute(); 
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($data as $row) {
+    echo '<tr><td><h5>Total:</h5></td><td></td><td></td><td><h2>$'.$row['totalPrice']."</h2></td></tr>";
+    }
+    echo '</form></table></div><form action="pewpew.php" method="POST"> <textarea name="user_address"></textarea><input name="submit" type="submit"></form>' ;
+    }
+
 else {
     header('location:../login.php');
 }

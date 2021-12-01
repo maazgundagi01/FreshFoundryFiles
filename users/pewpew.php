@@ -56,46 +56,41 @@
             <div class="productpageitems">
 
 <?php
-$dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'root';
-$password = '';
+@include"../db.php";
 
-
-try {
-    $db = new PDO($dsn,$username,$password);
-    //echo "Connection made to database";
-} catch (PDOException $e) {
-    $error_message = $e->getMessage();
-    echo $error_message;
-    exit();
-}
 if($_COOKIE["user_cookie"]) {
-$cart_user = $_COOKIE["user_cookie"];
-$cart_user_orders = $_COOKIE["user_cookie"]."orders";
-echo $cart_user_orders;
+    $cart_user = $_COOKIE["user_cookie"];
+    $cart_user_orders = $_COOKIE["user_cookie"]."orders";
+    echo $cart_user_orders;
 
-$stmt = $db->prepare("SELECT * FROM $cart_user");
-$stmt->execute(); 
-$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($data as $row) {
-    $good_name = $row['good_name'];
-    $good_price = $row['good_name'];
-    $good_image = $row['good_name'];
-    
-    $query1 = "CREATE TABLE IF NOT EXISTS $cart_user_orders (sr_no INT(11) PRIMARY KEY AUTO_INCREMENT, good_name VARCHAR(64), good_price INT(11), good_image VARCHAR(255))";
-    $stmt = $db->prepare($query1);
-    $stmt->execute();
-    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    echo "created";
+    $stmt = $db->prepare("SELECT * FROM $cart_user");
+    $stmt->execute(); 
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($data as $row) {
+        $good_name = $row['good_name'];
+        $good_price = $row['good_name'];
+        $good_image = $row['good_name'];
+        $address = $_POST['user_address'];
+        
+        $query1 = "CREATE TABLE IF NOT EXISTS $cart_user_orders (sr_no INT(11) PRIMARY KEY AUTO_INCREMENT, good_name VARCHAR(64), good_price INT(11), good_image VARCHAR(255), user_address varchar(255))";
+        $stmt = $db->prepare($query1);
+        $stmt->execute();
+        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
 
-        $query2 = "INSERT INTO $cart_user_orders VALUES ('','$good_name','$good_price','$good_image')";
+        $query2 = "INSERT INTO $cart_user_orders VALUES ('','$good_name','$good_price','$good_image','$address')";
         $stmt = $db->prepare($query2);
         $stmt->execute();
         $stmt->closeCursor();
-        echo "updated";
-}
-}
+
+        $query3 = "DROP TABLE $cart_user";
+        $stmt = $db->prepare($query3);
+        $stmt->execute();
+        $stmt->closeCursor();
+        echo 'Order submitted successfully';
+        die;
+    };
+};
 
 ?>
 </div>
