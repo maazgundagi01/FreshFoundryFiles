@@ -95,8 +95,8 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     echo "Login";
                                 }
                                 };?></a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">My Cart</a></li>
+                <li><a href="orders.php">Orders</a></li>
+                <li><a href="./users/chulbul.php">My Cart</a></li>
                 <!-- <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li> -->
                 <li><a href="./sessionend.php">Sign Out</a></li>
             </ul>
