@@ -63,7 +63,7 @@
             Welcome To The Fresh Foundry
         </h1>
         <h3 style="color:white;">
-            Groceries online.... delivered to you at your convenience!
+            Buy groceries online.... pay on delivery!
         </h3>
         <h5 style="color:white; margin-top: 10vh;">
             Choose from wide variety of Fresh products and get them delivery at your doorstep!
