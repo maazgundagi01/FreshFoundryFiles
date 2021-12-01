@@ -76,17 +76,17 @@ $cart_user = $_COOKIE["user_cookie"];
 $stmt = $db->prepare("SELECT * FROM $cart_user");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo '<div class="card_wrapper">';
+echo '<table><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
 foreach ($data as $row) {
-    echo '<div class="cards_item">'.'<img src="../uploads/'. $row['good_image'].'"> <h3>'.$row['good_name']."</h3><br /><h5>Price: $". $row['good_price'].'</h5><br /></div>';
+    echo '<tr >'.'<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td><td> <h3>'.$row['good_name']."</h3></td><td><h5>Price: $". $row['good_price'].'</h5></td><td><input type="submit" name="submit"/></td></tr>';
 }
-echo '</div>';
+echo '</table>';
 $stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// foreach ($data as $row) {
-// echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
-// }
+ foreach ($data as $row) {
+ echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
+}
 }
 
 else {
