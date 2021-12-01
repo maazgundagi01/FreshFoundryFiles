@@ -68,8 +68,8 @@ if($_COOKIE["user_cookie"]) {
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($data as $row) {
         $good_name = $row['good_name'];
-        $good_price = $row['good_name'];
-        $good_image = $row['good_name'];
+        $good_price = $row['good_price'];
+        $good_image = $row['good_image'];
         $address = $_POST['user_address'];
         
         $query1 = "CREATE TABLE IF NOT EXISTS $cart_user_orders (sr_no INT(11) PRIMARY KEY AUTO_INCREMENT, good_name VARCHAR(64), good_price INT(11), good_image VARCHAR(255), user_address varchar(255))";
@@ -88,7 +88,8 @@ if($_COOKIE["user_cookie"]) {
         $stmt->execute();
         $stmt->closeCursor();
         echo 'Order submitted successfully';
-        die;
+
+        header('location:../orders.php');
     };
 };
 
