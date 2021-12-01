@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e7083138fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/admin_style.css">
+    <style>
+    </style>
 </head>
 <body>
 <header>
@@ -56,20 +58,18 @@
             </div>
         </div>
     </section>-->
-
-    <section style="position: fixed; top: 30vh; left: 27vw;text-align: center;">
-        <h1>
+    <div style="padding:3rem; background-image:url('./Assets/Images/vecteezy_green-background_tm1120.jpg'); padding-top:13rem; position:fixed; top:3rem; height:62vh; width:100vw; text-align: center;">
+        <h1 style="color:white;">
             Welcome To The Fresh Foundry
         </h1>
-        <h3>
+        <h3 style="color:white;">
             Groceries online.... delivered to you at your convenience!
         </h3>
-        <h5 style="margin-top: 10vh;">
+        <h5 style="color:white; margin-top: 10vh;">
             Choose from wide variety of Fresh products and get them delivery at your doorstep!
         </h5>
-    </section>
-
-    <section class="categories">
+</div>
+    <section class="categories" style="padding-top:2rem;">
         <div class="products">
             <a href="./users/fresh.php">
                 <div class="goods">
