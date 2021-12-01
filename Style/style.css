@@ -284,3 +284,28 @@ header {
 text-decoration: none;
 color: black;
 }
+table{
+    border-radius:7px;
+    box-shadow:2px 2px 8px rgba(0, 0, 0, 0.137);
+    padding: 2rem;
+    width: 100%;
+}
+td{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+th{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+tr{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13);
+}
