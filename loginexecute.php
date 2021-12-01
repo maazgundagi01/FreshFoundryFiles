@@ -5,9 +5,8 @@ $pass = trim($_POST['password']);
 
 $user_cookie = $user;
 
-$dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'root';
-$password = '';
+@include'dbadmin.php';
+@include'dbuser.php';
 
 try {
     $db = new PDO($dsn,$username,$password);

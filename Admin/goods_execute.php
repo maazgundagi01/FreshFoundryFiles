@@ -1,9 +1,6 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'root';
-$password = '';
-
+@include"../dbadmin.php";
 
 try {
     $db = new PDO($dsn,$username,$password);

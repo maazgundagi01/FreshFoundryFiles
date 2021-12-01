@@ -59,7 +59,7 @@
         <div class="productpageitems">
             <?php
 
-                @include"db.php";
+                @include"dbadmin.php";
 
                 $cart_user = $_COOKIE["user_cookie"]."orders";
 
