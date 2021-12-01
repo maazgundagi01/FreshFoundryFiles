@@ -10,12 +10,19 @@ try {
     echo $error_message;
     exit();
 }
-if($_COOKIE["user_cookie"]) {
-$cart_user = $_COOKIE["user_cookie"];
+if(isset($_POST['delete'])){
+    if($_COOKIE["user_cookie"]) {
+        $cart_user = $_COOKIE["user_cookie"];
+        
+        $sr_no = $_POST['sr_no'];
+        $query = "DELETE FROM $cart_user WHERE sr_no = '$sr_no'";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $stmt->closeCursor();
 
-$sr_no=trim($_POST['sr_no']);
-$step=$db->prepare("DELETE FROM $cart_user WHERE sr_no=$sr_no");
-$step->execute();
-echo "deleted";
+        
+        // echo "deleted";
+        // header('location:chulbul.php');
+        };
 }
-        ?>
+?>
