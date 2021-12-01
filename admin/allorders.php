@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e7083138fd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style/admin_style.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/admin_style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="../indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
+            <a href="indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
         </div>
         <div class="shadow-box">
             <div class="searchbar">
@@ -79,48 +80,67 @@
 
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
-            <div class="productpageitems">
+            <!--Form Action => execute.php method POST-->
+            <!-- <form class="actionForm" action="execute.php" method="POST">
+                <h1 class="formHead">Add Products</h1> -->
+                <!--Name Input-->
+                <!-- <div class="row">
+                    <div class="mb-3 col">
+                        <label for="nameField" class="form-label opsFormIp1">Name</label>
+                        <input type="text" name="product_name" class="form-control" id="nameInput" placeholder="Example input placeholder">
+                    </div> -->
+                <!--Price-->
+                <!-- <div class="row">
+                    <div class=" col">
+                        <label for="priceField" class="form-label opsFormIp1">Price</label>
+                        <input type="text" name="product_price" class="form-control" id="nameInput" placeholder="Example input placeholder">
+                    </div> -->
+                <!--Image Input-->
+                    <!-- <div class=" col ">
+                        <label for="formFile" class="form-label opsFormIp3">Image</label>
+                        <input class="form-control"  name="Image" type="file" id="formFile">
+                    </div>
 
-<?php
-$dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'root';
-$password = '';
+                    <div class="mb-3 custom-margin-15">
+                        <label for="descriptionInput" class="form-label opsFormIp4">Example textarea</label>
+                        <textarea name="product_desc" class="form-control" id="descriptionInput" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary mb-5" style=" width:10vh; margin-left:1rem ; padding: 5px; border-radius: 5px;" >Submit</button>
+            </form> -->
+            <!-- <div>
+                <div class="welcome-admin" style="text-align: center;margin-top: 2em;">
+                    <h1>Welcome <span><?php //echo ucfirst($_COOKIE['user_cookie']);?></span> to the Dashboard</h1><br>
+                    <p>Please select a category on the left to begin updating!</p>
+                </div>
+                <div class="system-updates" style="text-align: center; position: relative; top: 40vh;">
+                    <h1>What's new!</h1><br>
+                    <p>All updates to our system will show here...</p>
+                </div>
+            </div> -->
 
+            <?php
+            
+            @include"../db.php";
+            
+            $query = "SHOW TABLES LIKE '%orders%'";
+            $stmt = $db->prepare($query);
+            $stmt->execute();
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-try {
-    $db = new PDO($dsn,$username,$password);
-    //echo "Connection made to database";
-} catch (PDOException $e) {
-    $error_message = $e->getMessage();
-    echo $error_message;
-    exit();
-}
-if($_COOKIE["user_cookie"]) {
+            echo '<pre>';
+            var_dump($row);
+            echo '</pre>';
 
-// $stmt = $db->prepare("SELECT * FROM users");
-//     $stmt->execute(); 
-//     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//     echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
-//     foreach ($data as $row) {
-//         echo '';
-//     }
+            $orderby = array();
 
-$query = "SELECT * FROM users";
-$stmt = $db->prepare($query);
-$stmt->execute();
-$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($row as $r){
+                $orderby[] = $r['Tables_in_freshfoundry (%orders%)'];
+            }
 
-    echo '<div class=\'users-list\'><table>';
-    echo '<tr><td>Full Name</td><td>Username</td><td>email</td>';
-foreach($row as $r) {
-    echo '<tr><td>'.ucfirst($r['first_name']).ucfirst($r['last_name']).'</td><td>'.strtolower($r['username']).'</td><td>'.strtolower($r['email']).'</td>';
-    echo '</tr>';
-};
-    echo '</table></div>';
-
-};
-?>
-</div>
-</div>
+            var_dump($orderby);
+            
+            ?>
+        </div>
+    </main>
 </body>
 </html>

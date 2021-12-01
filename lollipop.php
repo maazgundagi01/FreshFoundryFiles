@@ -62,15 +62,15 @@
             </div>
             <!--Dashboard ITEM 2 - Orders -->
             <h2 class="dashitem">
-                Orders
+                <a href="./admin/allorders.php">Orders</a>
             </h2>
             <!--Dashboard ITEM 3 - Users -->
             <h2 class="dashitem">
-            Users
+                <a href="./admin/users.php">Users</a>
             </h2>
             <!--Dashboard ITEM 4 - Queries -->
             <h2 class="dashitem">
-                Queries
+                <a href="./admin/cxqueries.php">Queries</a>
             </h2>
             <!--Dashboard ITEM 5 - Wallet -->
             <h2 class="dashitem">

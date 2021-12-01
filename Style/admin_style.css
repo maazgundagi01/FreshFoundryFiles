@@ -108,3 +108,16 @@ body{
 .signup-link:visited {
     color: blue;
 }
+
+
+/*USERS LIST IN ADMIN*/
+
+.users-list {
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.users-list td {
+    padding: 1em 2em;
+}
