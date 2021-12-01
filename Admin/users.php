@@ -76,12 +76,8 @@ $stmt = $db->prepare("SELECT * FROM users");
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
     foreach ($data as $row) {
-        echo '<tr >'.
-        '<td><p>'.$row['username'].'</p><p>'.$row['first_name'].'</p></td>'.$row['last_name']."</h5></td>
-        <td><h5>Price: $".$row['email'].'</h5></td>
-        <td><input value="'. $row['sr_no'].'" name="sr_no" type="hidden"><input type="submit" name="submit" value=" Remove"/></td></tr>';
+        echo '';
     }
-    
 }
 ?>
 </div>
