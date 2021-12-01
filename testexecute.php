@@ -3,8 +3,8 @@
 session_start();
 
 $dsn = 'mysql:host=localhost;dbname=testdb';
-$username = 'root';
-$password = '';
+$username = 'testadmin';
+$password = 'testadmin';
 
 try {
     $db = new PDO($dsn,$username,$password);

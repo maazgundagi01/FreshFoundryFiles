@@ -47,7 +47,8 @@ try {
     echo $error_message;
     exit();
 }
-
+if($_COOKIE["user_cookie"]) {
+    
 $cart_user = $_COOKIE["user_cookie"];
 
 $stmt = $db->prepare("SELECT * FROM $cart_user");
@@ -63,6 +64,11 @@ $stmt->execute();
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($data as $row) {
 echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
+}
+}
+
+else {
+    header('location:../login.php');
 }
 ?>
 </body>
