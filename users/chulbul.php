@@ -84,9 +84,9 @@ echo '</div>';
 $stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($data as $row) {
-echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
-}
+// foreach ($data as $row) {
+// echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
+// }
 }
 
 else {
