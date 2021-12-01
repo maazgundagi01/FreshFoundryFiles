@@ -139,6 +139,12 @@
 
             var_dump($orderby);
             
+            echo '<div><form action=\'\' method=\'POST\'><table>';
+            echo '<tr><td>Pending Orders</td>';
+            echo '<td>Actions</td>';
+            
+            // echo '<td><input type=\'submit\' value=\'Open Order\' name=\'orderview\'></td>';
+
             ?>
         </div>
     </main>
