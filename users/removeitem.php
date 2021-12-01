@@ -14,8 +14,8 @@ if($_COOKIE["user_cookie"]) {
 $cart_user = $_COOKIE["user_cookie"];
 
 $sr_no=trim($_POST['sr_no']);
-$step=$db->prepare("DELETE FROM $cart_user WHERE sr_no=:sr_no");
-$step->bindParam(":sr_no",$sr_no,PDO::PARAM_INT);
+$step=$db->prepare("DELETE FROM $cart_user WHERE sr_no=$sr_no");
 $step->execute();
+echo "deleted";
 }
         ?>
