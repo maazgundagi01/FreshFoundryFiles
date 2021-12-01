@@ -12,10 +12,11 @@ try {
 }
 if($_COOKIE["user_cookie"]) {
 $cart_user = $_COOKIE["user_cookie"];
-
-$sr_no=trim($_POST['sr_no']);
-$step=$db->prepare("DELETE FROM $cart_user WHERE sr_no=$sr_no");
-$step->execute();
+$sr_no = $_POST['sr_no'];
+$queryDelete = "DELETE FROM $cart_user WHERE sr_no = 'sr_no'";
+$stmt = $db->prepare($queryDelete);
+$stmt->execute();
+$stmt->closeCursor();
 echo "deleted";
 }
         ?>
