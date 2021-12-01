@@ -192,9 +192,9 @@ $stmt->execute();
 $row2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $newArray2 = array();
 foreach($row2 as $r2){
-    $newArray3[] = $r2['username'];
+    $newArray2[] = $r2['username'];
 }
-if(in_array($_COOKIE["user_cookie"], $newArray3)){
+if(in_array($_COOKIE["user_cookie"], $newArray2)){
     echo '<script>var adminBtn = document.getElementById(\'admin-btn\'); adminBtn.style.display = "block";</script>';
 }
 else {

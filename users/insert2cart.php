@@ -27,14 +27,11 @@ if($_COOKIE["user_cookie"]) {
     $good_price = trim($_POST['good_price']);
     $good_image = trim($_POST['good_image']);
 
-    if($row) {
-        $query2 = "INSERT INTO user_cart VALUES ('','$good_name','$good_price','$good_image')";
-        $stmt = $db->prepare($query2);
-        $stmt->execute();
-        // $stmt->closeCursor();
-        echo "updated";
-    }
-
+    $query2 = "INSERT INTO $cart_user VALUES ('','$good_name','$good_price','$good_image')";
+    $stmt = $db->prepare($query2);
+    $stmt->execute();
+    // $stmt->closeCursor();
+    echo "updated";
 }
 else {
     echo "<script>alert('Please login or signup to add item to cart');</script>";
