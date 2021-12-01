@@ -16,24 +16,21 @@ if($_COOKIE["user_cookie"]) {
     }
     $cart_user = $_COOKIE["user_cookie"];
 
-    $query1 = "CREATE TABLE IF NOT EXISTS $cart_user(sr_no INT(11) PRIMARY KEY AUTO_INCREMENT, good_name VARCHAR(64), good_price INT(11), good_image VARCHAR(255))";
+    $query1 = "CREATE TABLE IF NOT EXISTS $cart_user (sr_no INT(11) PRIMARY KEY AUTO_INCREMENT, good_name VARCHAR(64), good_price INT(11), good_image VARCHAR(255))";
     $stmt = $db->prepare($query1);
     $stmt->execute();
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // $stmt->closeCursor();
     echo "created";
-
     $good_name = trim($_POST['good_name']);
     $good_price = trim($_POST['good_price']);
     $good_image = trim($_POST['good_image']);
 
-    if($row) {
-        $query2 = "INSERT INTO user_cart VALUES ('','$good_name','$good_price','$good_image')";
+        $query2 = "INSERT INTO $cart_user VALUES ('','$good_name','$good_price','$good_image')";
         $stmt = $db->prepare($query2);
         $stmt->execute();
         // $stmt->closeCursor();
         echo "updated";
-    }
 
 }
 else {
