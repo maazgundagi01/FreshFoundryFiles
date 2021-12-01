@@ -36,7 +36,7 @@ echo '<pre>';
 var_dump($row);
 echo '</pre>';
 ?>
-<script src="test.js"></script>
+<script src="./javascript/test.js"></script>
 </body>
 </html>
 
