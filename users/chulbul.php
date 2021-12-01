@@ -59,10 +59,12 @@ foreach ($data as $row) {
     echo '<div class="cards_item">'.'<img src="../uploads/'. $row['good_image'].'"> <h3>'.$row['good_name']."</h3><br /><h5>Price: $". $row['good_price'].'</h5><br /></div>';
 }
 echo '</div>';
-$stmt = $db->prepare("SELECT SUM('good_price') AS totalPrice FROM $cart_user");
+$stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($data as $row) {
 echo '<div style="position:fixed; top:50vh;" >'.$row['totalPrice']."</div>";
+}
 ?>
 </body>
 </html>
