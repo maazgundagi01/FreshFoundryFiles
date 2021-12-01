@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,26 +80,32 @@
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
             <!--Form Action => execute.php method POST-->
-            <form class="actionForm" action="execute.php" method="POST">
+            <form action="goods_execute.php" method="POST" enctype="multipart/form-data">
                 <h1 class="formHead">Add Products</h1>
                 <!--Name Input-->
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="nameField" class="form-label opsFormIp1">Name</label>
-                        <input type="text" name="product_name" class="form-control" id="nameInput" placeholder="Example input placeholder">
+                        <input type="text" name="goods_name" class="form-control" id="nameInput" placeholder="Example input placeholder">
                     </div>
                 <!--Price-->
                 <div class="row">
                     <div class=" col">
                         <label for="priceField" class="form-label opsFormIp1">Price</label>
-                        <input type="text" name="product_price" class="form-control" id="nameInput" placeholder="Example input placeholder">
+                        <input type="text" name="price" class="form-control" id="nameInput" placeholder="Example input placeholder">
+                    </div>
+                <!--Goods Id -->
+                    <div class=" col">
+                        <label for="priceField" class="form-label opsFormIp1">Goods ID</label>
+                        <input type="text" name="goods_id" class="form-control" id="nameInput" placeholder="Example input placeholder">
                     </div>
                 <!--Image Input-->
                     <div class=" col ">
                         <label for="formFile" class="form-label opsFormIp3">Image</label>
-                        <input class="form-control"  name="Image" type="file" id="formFile">
+                        <input class="form-control"  name="image" type="file" id="formFile">
                     </div>
-
+                <!--Product-->
+                <input  type="hidden" name="prod_name" id="" value="Dairy"/>
                     <div class="mb-3 custom-margin-15">
                         <label for="descriptionInput" class="form-label opsFormIp4">Example textarea</label>
                         <textarea name="product_desc" class="form-control" id="descriptionInput" rows="3"></textarea>

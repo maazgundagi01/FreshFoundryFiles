@@ -71,5 +71,6 @@ else {
     header('location:../login.php');
 }
 ?>
+
 </body>
 </html>
