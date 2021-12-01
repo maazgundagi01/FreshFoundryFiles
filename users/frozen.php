@@ -39,16 +39,15 @@
             <a>Categories</a>
             </h1>
             <!--Dashboard ITEM 1 - Inventory-->
-            <div class="accordion-body" style="text-decoration:none;">
-                        <a  href="./a_fresh.php">Fresh Produce</a><br/>
-                        <a href="./a_frozen.php">Frozen Foods</a><br/>
-                        <a href="./a_meat.php">Meat</a><br/>
-                        <a href="./a_dairy.php">Dairy</a><br/>
-                        <a href="./a_spices.php">Spices</a><br/>
-                        <a href="./a_baked.php">Baked Goods</a><br/>
-                        <a href="./a_beverages.php">Beverages </a><br/>
-                    </div>
-                     
+                <div class="accordion-body" style="text-decoration:none;">
+                    <a  href="./fresh.php">Fresh Produce</a><br/>
+                    <a href="./frozen.php">Frozen Foods</a><br/>
+                    <a href="./meat.php">Meat</a><br/>
+                    <a href="./dairy.php">Dairy</a><br/>
+                    <a href="./spices.php">Spices</a><br/>
+                    <a href="./baked.php">Baked Goods</a><br/>
+                    <a href="./beverages.php">Beverages </a><br/>
+                </div>
             </h2>
         </div>
 

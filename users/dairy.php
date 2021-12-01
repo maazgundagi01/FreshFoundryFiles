@@ -46,7 +46,7 @@
                       Inventory
                     </h2>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse custom-sidebar" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseOne" class="accordion-collapse collapse custom-sidebar" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <a href="./a_fresh.php">Fresh Produce</a> <br/>
                         <a href="./a_frozen.php">Frozen Foods</a> <br/>
@@ -56,7 +56,7 @@
                         <a href="./a_baked.php">Baked Goods</a> <br/>
                         <a href="./a_beverages.php">Beverages </a> <br/>
                     </div>
-                     </div>
+                </div>
                 </div>
               </div>
               <!--Dashboard ITEM 2 - Orders -->
