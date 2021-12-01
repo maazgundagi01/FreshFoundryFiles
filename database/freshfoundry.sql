@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2021 at 01:55 PM
+-- Generation Time: Dec 01, 2021 at 09:20 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,9 +40,8 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`sr_no`, `username`, `password`, `name`, `email`) VALUES
-(3, 'admin-test', 'test', 'test', 'test@gmail.com'),
-(4, 'admin-test1', 'test', 'test', 'test@gmail.com'),
-(6, 'admin-test2', 'test', 'test', 'test@gmail.com');
+(7, 'testadmin1', 'test', 'testadmin1', 'testadmin@test.com'),
+(9, 'testadmin2', 'test', 'testadmin1', 'testadmin@test.com');
 
 -- --------------------------------------------------------
 
@@ -59,6 +58,14 @@ CREATE TABLE `baked_goods` (
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `baked_goods`
+--
+
+INSERT INTO `baked_goods` (`sr_no`, `goods`, `goods_id`, `prod_id`, `price`, `image`) VALUES
+(1, 'Dora Cake', '1', 'ff-bg-06', 4, 'istockphoto-1203754979-612x612.jpg'),
+(3, 'Donut', '2', 'ff-bg-06', 4, 'donut-isolated-on-white-background.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -73,6 +80,13 @@ CREATE TABLE `beverages` (
   `price` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `beverages`
+--
+
+INSERT INTO `beverages` (`sr_no`, `goods`, `goods_id`, `prod_id`, `price`, `image`) VALUES
+(0, 'Canada Dry 2Lr', '1', 'ff-xb-07', 2, '6000200114480.jpg');
 
 -- --------------------------------------------------------
 
@@ -163,6 +177,27 @@ CREATE TABLE `meat` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `sr_no` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `good_name` varchar(100) NOT NULL,
+  `good_price` int(11) NOT NULL,
+  `good_image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`sr_no`, `user_name`, `good_name`, `good_price`, `good_image`) VALUES
+(1, 'testadmin1', 'Canada Dry 2Lr', 0, 'Canada Dry 2Lr');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `spices`
 --
 
@@ -174,6 +209,72 @@ CREATE TABLE `spices` (
   `price` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test1`
+--
+
+CREATE TABLE `test1` (
+  `sr_no` int(11) NOT NULL,
+  `good_name` varchar(64) DEFAULT NULL,
+  `good_price` int(11) DEFAULT NULL,
+  `good_image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test1`
+--
+
+INSERT INTO `test1` (`sr_no`, `good_name`, `good_price`, `good_image`) VALUES
+(1, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg'),
+(3, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg'),
+(4, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg'),
+(5, 'Donut', 4, 'donut-isolated-on-white-background.jpg'),
+(6, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testadmin1`
+--
+
+CREATE TABLE `testadmin1` (
+  `sr_no` int(11) NOT NULL,
+  `good_name` varchar(64) DEFAULT NULL,
+  `good_price` int(11) DEFAULT NULL,
+  `good_image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testadmin1`
+--
+
+INSERT INTO `testadmin1` (`sr_no`, `good_name`, `good_price`, `good_image`) VALUES
+(2, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testadmin1orders`
+--
+
+CREATE TABLE `testadmin1orders` (
+  `sr_no` int(11) NOT NULL,
+  `good_name` varchar(64) DEFAULT NULL,
+  `good_price` int(11) DEFAULT NULL,
+  `good_image` varchar(255) DEFAULT NULL,
+  `user_address` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testadmin1orders`
+--
+
+INSERT INTO `testadmin1orders` (`sr_no`, `good_name`, `good_price`, `good_image`, `user_address`) VALUES
+(1, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg', '504 main st'),
+(2, 'Donut', 4, 'donut-isolated-on-white-background.jpg', '504 main st');
 
 -- --------------------------------------------------------
 
@@ -195,9 +296,54 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`sr_no`, `first_name`, `last_name`, `username`, `password`, `email`) VALUES
-(2, 'test', 'test', 'user-test', 'test', 'test@gmail.com'),
-(3, 'test', 'test', 'user-test2', 'test', 'test@gmail.com'),
-(4, 'test', 'test', 'user-test3', 'test', 'test@gmail.com');
+(17, 'test1', 'test1', 'test1', 'test', 'test@test.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_cart`
+--
+
+CREATE TABLE `user_cart` (
+  `sr_no` int(11) NOT NULL,
+  `good_name` varchar(100) NOT NULL,
+  `good_price` int(11) NOT NULL,
+  `good_image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_cart`
+--
+
+INSERT INTO `user_cart` (`sr_no`, `good_name`, `good_price`, `good_image`) VALUES
+(5, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg'),
+(6, 'Dora Cake', 4, 'istockphoto-1203754979-612x612.jpg'),
+(7, 'Donut', 4, 'donut-isolated-on-white-background.jpg'),
+(8, 'Donut', 4, 'donut-isolated-on-white-background.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_orders`
+--
+
+CREATE TABLE `user_orders` (
+  `sr_no` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `good_name` varchar(100) NOT NULL,
+  `good_price` int(11) NOT NULL,
+  `good_image` varchar(255) NOT NULL,
+  `user_address` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_orders`
+--
+
+INSERT INTO `user_orders` (`sr_no`, `user_name`, `good_name`, `good_price`, `good_image`, `user_address`) VALUES
+(1, 'testadmin1', 'Canada Dry 2Lr', 2, '6000200114480.jpg', '504 Main St'),
+(2, 'testadmin1', 'Canada Dry 2Lr', 2, '6000200114480.jpg', '504 main st'),
+(3, 'testadmin1', 'Canada Dry 2Lr', 2, '6000200114480.jpg', '504 main st');
 
 --
 -- Indexes for dumped tables
@@ -215,6 +361,7 @@ ALTER TABLE `admin_users`
 --
 ALTER TABLE `baked_goods`
   ADD PRIMARY KEY (`goods_id`),
+  ADD UNIQUE KEY `sr_no` (`sr_no`),
   ADD KEY `prod_id` (`prod_id`);
 
 --
@@ -259,11 +406,35 @@ ALTER TABLE `meat`
   ADD KEY `prod_id` (`prod_id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
 -- Indexes for table `spices`
 --
 ALTER TABLE `spices`
   ADD PRIMARY KEY (`goods_id`),
   ADD KEY `prod_id` (`prod_id`);
+
+--
+-- Indexes for table `test1`
+--
+ALTER TABLE `test1`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
+-- Indexes for table `testadmin1`
+--
+ALTER TABLE `testadmin1`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
+-- Indexes for table `testadmin1orders`
+--
+ALTER TABLE `testadmin1orders`
+  ADD PRIMARY KEY (`sr_no`);
 
 --
 -- Indexes for table `users`
@@ -273,6 +444,18 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `user_cart`
+--
+ALTER TABLE `user_cart`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
+-- Indexes for table `user_orders`
+--
+ALTER TABLE `user_orders`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -280,13 +463,55 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_users`
 --
 ALTER TABLE `admin_users`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `baked_goods`
+--
+ALTER TABLE `baked_goods`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `test1`
+--
+ALTER TABLE `test1`
   MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `testadmin1`
+--
+ALTER TABLE `testadmin1`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `testadmin1orders`
+--
+ALTER TABLE `testadmin1orders`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `sr_no` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `sr_no` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `user_cart`
+--
+ALTER TABLE `user_cart`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `user_orders`
+--
+ALTER TABLE `user_orders`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
