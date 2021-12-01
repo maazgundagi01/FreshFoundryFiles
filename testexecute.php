@@ -21,5 +21,9 @@ $query = "INSERT INTO testvalue VALUES ('',$input)";
 $stmt = $db->prepare($query);
 $stmt->execute();
 
+// $query = "DELETE FROM testvalue";
+// $stmt = $db->prepare($query);
+// $stmt->execute();
+
 header('location:'.$_SESSION['server']);
 ?>

@@ -1,6 +1,3 @@
-
-//Quantity increment/decrement javascript
-
 var plus = document.getElementById('plus');
 var minus = document.getElementById('minus');
 var number = parseInt(document.getElementById('number').value);
@@ -19,4 +16,4 @@ function decreaseValue() {
         number--;
         document.getElementById('number').value = number;
     }
-};
+}
