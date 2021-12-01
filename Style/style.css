@@ -42,7 +42,7 @@
 }
 
 body {
-    background-color: var(--g-whitebg);
+    background-color: var(--g-whitebg); 
 }
 
 header {
