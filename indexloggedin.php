@@ -125,17 +125,17 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>-->
 
-    <section style="position: fixed; top: 30vh; left: 27vw;text-align: center;">
-        <h1>
+    <div style="padding:3rem; background-image:url('./Assets/Images/vecteezy_green-background_tm1120.jpg'); padding-top:13rem; position:fixed; top:3rem; height:62vh; width:100vw; text-align: center;">
+        <h1 style="color:white;">
             Welcome To The Fresh Foundry
         </h1>
-        <h3>
+        <h3 style="color:white;">
             Groceries online.... delivered to you at your convenience!
         </h3>
-        <h5 style="margin-top: 10vh;">
+        <h5 style="color:white; margin-top: 10vh;">
             Choose from wide variety of Fresh products and get them delivery at your doorstep!
         </h5>
-    </section>
+    </div>
 
     <section class="categories">
         <div class="products">
