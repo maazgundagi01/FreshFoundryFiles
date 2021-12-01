@@ -34,7 +34,7 @@
 </header>
 <div class="adminaccessbutton" id="admin-btn"><a href="./lollipop.php">A</a></div>
 <div class="content">
-    <section class="main-carousel">
+    <!--<section class="main-carousel">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section class="categories">
         <div class="products">

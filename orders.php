@@ -81,14 +81,14 @@
                     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     echo '<div class=\'order-page\'>';
-                    echo '<p class=\'orders-head\'>My order</p><table>';
+                    echo '<h1 style="margin-bottom:1.75rem;" class=\'orders-head\'>My orders</h1><table> <tr><th>Products</th><th></th><th>Price</th></tr>';
                     foreach($row as $r){
                         echo '<tr><td><img style=\'width: 200px; height: 200px; object-fit:contain;\' src=\'./uploads/'.$r['good_image'].'\'></td>';
                         echo '<td>'.$r['good_name'].'</td>';
-                        echo '<td>'.$r['good_price'].'</td>';
+                        echo '<td>$'.$r['good_price'].'</td>';
                     };
                     echo '</table></br>';
-                    echo '<div><p>Delivering To : '.$r['user_address'].'</p></div>';
+                    echo '<table><tr><th>Delivering To : '.$r['user_address'].'</th></tr></table>';
                     echo '</div>';
                 }
                 else {
