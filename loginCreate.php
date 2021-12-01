@@ -5,9 +5,8 @@
 $user = trim(strtolower($_POST['username']));
 $pass = trim($_POST['password']);
 
-$dsn = 'mysql:host=localhost;dbname=freshfoundry';
-$username = 'root';
-$password = '';
+@include'dbadmin.php';
+@include'dbuser.php';
 
 echo $user;
 echo $pass;
