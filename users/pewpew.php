@@ -88,7 +88,8 @@ if($_COOKIE["user_cookie"]) {
         $stmt->execute();
         $stmt->closeCursor();
         echo 'Order submitted successfully';
-        die;
+
+        header('location:./orders.php');
     };
 };
 
