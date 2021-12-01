@@ -76,13 +76,13 @@ $cart_user = $_COOKIE["user_cookie"];
 $stmt = $db->prepare("SELECT * FROM $cart_user");
     $stmt->execute(); 
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Delete</h2></th>';
+    echo '<div style="width:100%"><h1 style="margin-bottom:2rem">My Cart</h1><table style="border-radius:7px; "><form action="removeitem.php" method="POST"><th></th><th><h2>Product</h2></th><th></th><th><h2>Action</h2></th>';
     foreach ($data as $row) {
         echo '<tr >'.
         '<td><img style="height:40px;" src="../uploads/'. $row['good_image'].'"></td>
         <td><h5>'.$row['good_name']."</h5></td>
         <td><h5>Price: $".$row['good_price'].'</h5></td>
-        <td><input value="'. $row['sr_no'].'" name="sr_no" type="hidden"><input type="submit" name="submit" value=" Remove"/></td></tr>';
+        <td><input value="'. $row['sr_no'].'" name="sr_no" type="hidden"><input style="padding: 10px;border-radius:10px;border: none; box-shadow: 1px 1px 3px rgba(0,0,0,0.3)" type="submit" name="submit" value="Remove"/></td></tr>';
     }
     echo '';
     $stmt = $db->prepare("SELECT SUM(good_price) as totalPrice FROM $cart_user");
