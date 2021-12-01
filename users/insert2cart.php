@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 if($_COOKIE["user_cookie"]) {
 
     $dsn = 'mysql:host=localhost;dbname=freshfoundry';
@@ -37,4 +40,6 @@ else {
     
     header('location:../login.php');
 }
+
+header('location:'.$_SESSION['server']);
 ?>

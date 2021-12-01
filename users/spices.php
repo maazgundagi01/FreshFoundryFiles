@@ -1,3 +1,10 @@
+
+<?php
+
+session_start();
+$_SESSION['server'] = $_SERVER['REQUEST_URI'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
