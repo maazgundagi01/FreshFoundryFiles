@@ -60,18 +60,18 @@
                 </div>
               </div>
               <!--Dashboard ITEM 2 - Orders -->
-              <h2 class="dashitem">
-                  Orders
-              </h2>
-              <!--Dashboard ITEM 3 - Users -->
-              <h2 class="dashitem">
-                Users
-            </h2>
-            <!--Dashboard ITEM 3 - Queries -->
             <h2 class="dashitem">
-                Queries
+                <a style="text-decoration: none;color: black;" href="./allorders.php">Orders</a>
             </h2>
-            <!--Dashboard ITEM 4 - Wallet -->
+            <!--Dashboard ITEM 3 - Users -->
+            <h2 class="dashitem">
+                <a style="text-decoration: none;color: black;" href="./users.php">Users</a>
+            </h2>
+            <!--Dashboard ITEM 4 - Queries -->
+            <h2 class="dashitem">
+                <a style="text-decoration: none;color: black;" href="./cxqueries.php">Queries</a>
+            </h2>
+            <!--Dashboard ITEM 5 - Wallet -->
             <h2 class="dashitem">
                 Wallet
             </h2>
