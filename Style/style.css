@@ -264,6 +264,7 @@ header {
 .card_wrapper{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap !important;
 }
 .cards_item{
     margin: 1rem;

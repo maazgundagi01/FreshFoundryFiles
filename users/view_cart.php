@@ -26,7 +26,7 @@ var_dump($row);
 echo '</pre>';
 echo '<div style=\'display:flex;flex-direction:row;\' class=\'view-items\'>';
 foreach($row as $r){
-    echo '<div class=\'flex-items\'><p>'.$r['good_name'].'</p><p>$'.$r['good_price'].'</p><p><img style=\'width:200px;height:200px;object-fit:contain;\' src=\'../uploads/'.$r['good_image'].'\'></div>';
+    echo '<div class=\'flex-items\'><p>'.$r['good_name'].'</p><p>$'.$r['good_price'].'</p><p><img style=\'width:500px;height:200px;object-fit:contain;\' src=\'../uploads/'.$r['good_image'].'\'></div>';
 }
 echo '</div>';
 ?>
