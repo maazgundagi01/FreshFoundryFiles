@@ -264,10 +264,6 @@ header {
 .card_wrapper{
     display: flex;
     flex-direction: row;
-    border-radius: 8px;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.26);
-    position: fixed;
-    top: 5rem;
 }
 .cards_item{
     margin: 1rem;
@@ -278,4 +274,8 @@ header {
 }
 .cards_item > img {
     height: 7rem;
+}
+.productpageitems{
+    display: flex;
+    flex-direction: row;
 }

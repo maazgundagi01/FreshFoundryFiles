@@ -87,7 +87,7 @@ try {
     exit();
 }
 
-$stmt = $db->prepare("SELECT * FROM dairy");
+$stmt = $db->prepare("SELECT * FROM baked_goods");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($data as $row) {
