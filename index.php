@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="./Login.php">Login</a></li>
                 <li><a href="#">Orders</a></li>
-                <li><a href="#">My Cart</a></li>
+                <li><a href="./users/chulbul.php">My Cart</a></li>
                 <li><a href="#"><img class="cart-png" src="./Assets/Images/shopping-cart-svg-png-icon-download-28.png" alt=""></a></li>
             </ul>
         </nav>
@@ -60,43 +60,43 @@
         <div class="products">
             <a href="./users/fresh.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/fresh.png" alt="">
                     <p>Fresh Produce</p>
                 </div>
             </a>
             <a href="./users/frozen.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/frozen.png" alt="">
                     <p>Frozen Foods</p>
                 </div>
             </a>
             <a href="./users/meat.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/meat.png" alt="">
                     <p>Meat</p>
                 </div>
             </a>
             <a href="./users/dairy.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/dairy.png" alt="">
                     <p>Dairy</p>
                 </div>
             </a>
             <a href="./users/spices.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/spices.png" alt="">
                     <p>Spices</p>
                 </div>
             </a>
             <a href="./users/baked.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="././Assets/Images/category_icons/baked.png" alt="">
                     <p>Baked Goods</p>
                 </div>
             </a>
             <a href="./users/beverages.php">
                 <div class="goods">
-                    <img src="./Assets/Images/heart.png" alt="">
+                    <img src="./Assets/Images/category_icons/beverages.png" alt="">
                     <p>Beverages</p>
                 </div>
             </a>
