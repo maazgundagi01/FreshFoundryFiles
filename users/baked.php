@@ -26,6 +26,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Hi, <?php echo ucfirst($_COOKIE['user_cookie']);?></a></li>
+                    <li><a href="./view_cart.php">My Cart</a></li>    
                     <li><a href="../sessionend.php">Sign Out</a></li>    
                 </ul>
             </nav>
