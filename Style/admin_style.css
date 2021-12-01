@@ -44,6 +44,7 @@ body{
     border-radius: 9px;
     margin-top: 10vh;
     box-shadow: var(--shadowbright);
+    padding: 2rem !important;
 }
     .actionForm{
             border: 1px solid rgb(182, 182, 182);

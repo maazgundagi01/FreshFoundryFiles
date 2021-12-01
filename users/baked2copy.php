@@ -32,14 +32,10 @@
         </nav>
     </div>
 </header>
-
-
 <?php
 $dsn = 'mysql:host=localhost;dbname=freshfoundry';
 $username = 'root';
 $password = '';
-
-
 try {
     $db = new PDO($dsn,$username,$password);
     //echo "Connection made to database";

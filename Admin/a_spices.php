@@ -89,12 +89,12 @@
                         <input type="text" name="goods_name" class="form-control" id="nameInput" placeholder="Example input placeholder">
                     </div>
                 <!--Price-->
-                <div class="row">
                     <div class=" col">
                         <label for="priceField" class="form-label opsFormIp1">Price</label>
                         <input type="text" name="price" class="form-control" id="nameInput" placeholder="Example input placeholder">
                     </div>
                 <!--Goods Id -->
+                <div class="row">
                     <div class=" col">
                         <label for="priceField" class="form-label opsFormIp1">Goods ID</label>
                         <input type="text" name="goods_id" class="form-control" id="nameInput" placeholder="Example input placeholder">
@@ -102,15 +102,12 @@
                 <!--Image Input-->
                     <div class=" col ">
                         <label for="formFile" class="form-label opsFormIp3">Image</label>
-                        <input class="form-control"  name="image" type="file" id="formFile">
+                        <input class="form-control"  name="image" type="file" id="formFile"><br/>
                     </div>
                 <!--Product-->
                 <input  type="hidden" name="prod_name" id="" value="spices"/>
-                    <div class="mb-3 custom-margin-15">
-                        <label for="descriptionInput" class="form-label opsFormIp4">Example textarea</label>
-                        <textarea name="product_desc" class="form-control" id="descriptionInput" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary mb-5" style=" width:10vh; margin-left:1rem ; padding: 5px; border-radius: 5px;" >Submit</button>
+                <div><button type="submit" class="submit" style="width:7rem; height:2rem;" >Submit</button><div>
+                </div>
             </form>
         </div>
     </main>
