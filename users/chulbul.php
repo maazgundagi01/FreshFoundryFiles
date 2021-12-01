@@ -91,7 +91,7 @@ $stmt = $db->prepare("SELECT * FROM $cart_user");
     foreach ($data as $row) {
     echo '<tr><td><h5>Total:</h5></td><td></td><td></td><td><h2>$'.$row['totalPrice']."</h2></td></tr>";
     }
-    echo '</form></table></div><form action="pewpew.php" method="POST"> <textarea name="user_address"></textarea><input name="submit" type="submit"></form>' ;
+    echo '</form></table><table  ><tr style="box-shadow:none !important;"><th style="box-shadow:none !important;"><form action="pewpew.php" method="POST"> <label>Deliver to:</label></th></tr><tr><td><textarea name="user_address"></textarea><div><input name="submit" style="margin-bottom: 1rem" type="submit"></div></td></tr></form></table></div>' ;
     }
 
 else {
