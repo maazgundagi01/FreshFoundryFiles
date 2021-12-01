@@ -92,6 +92,7 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 else {
     header('location:../login.php');
 }
+
 ?>
 </div>
 </div>
