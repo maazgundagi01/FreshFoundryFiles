@@ -52,11 +52,11 @@ try {
 $stmt = $db->prepare("SELECT * FROM baked_goods");
 $stmt->execute(); 
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo '<form action="insert_cart.php" method="post" class="card_wrapper">';
+echo '<div class="card_wrapper">';
 foreach ($data as $row) {
-    echo '<div class="cards_item">'.'<img src="../uploads/'. $row['image'].'"> <h3>'.$row['goods']."</h3><br /><h5>Price: $". $row['price']."</h5><br />".'<br />'.'<input name="good_name" value=" '.$row['goods'].'"style="display:none" >'.'<input name="good_price"  value="'.$row['price'].'" style="display:none">'.'<input name="good_image"  value="'.$row['image'].'" style="display:none">'.'<input name="submit" type="submit"></div>';
+    echo '<div class="cards_item">'.'<img src="../uploads/'. $row['image'].'"> <h3>'.$row['goods']."</h3><br /><h5>Price: $". $row['price']."</h5><br />".'<br />'.'<form action="insert_cart.php" method="post"><input name="good_name" value=" '.$row['goods'].'"style="display:none" >'.'<input name="good_price"  value="'.$row['price'].'" style="display:none">'.'<input name="good_image"  value="'.$row['image'].'" style="display:none">'.'<input name="submit" type="submit"></form></div>';
 }
-echo '</form>';
+echo '</div>';
 ?>
 </body>
 </html>
