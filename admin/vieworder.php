@@ -1,3 +1,9 @@
+<?php
+
+@include'../dbadmin.php';
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +21,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
+            <a href="../indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
         </div>
         <div class="shadow-box">
             <div class="searchbar">
@@ -37,7 +43,7 @@
         <!--DASHBOARD-->
         <div class="dashboard">
             <h1 class="dashhead">
-                <a href="../lollipop.php">Dashboard</a>
+                <a href="lollipop.php">Dashboard</a>
             </h1>
             <!--Dashboard ITEM 1 - Inventory-->
             <div class="accordion accordion-flush">
@@ -48,7 +54,7 @@
                     </h2>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse custom-sidebar" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
+                    <div class="accordion-body">
                             <a href="./a_fresh.php">Fresh Produce</a> <br/>
                             <a href="./a_frozen.php">Frozen Foods</a> <br/>
                             <a href="./a_meat.php">Meat</a> <br/>
@@ -59,28 +65,69 @@
                     </div>
                      </div>
                 </div>
-            </div>
-            <!--Dashboard ITEM 2 - Orders -->
-            <h2 class="dashitem">
-                <a style="text-decoration: none;color: black;" href="./allorders.php">Orders</a>
-            </h2>
-            <!--Dashboard ITEM 3 - Users -->
-            <h2 class="dashitem">
-                <a style="text-decoration: none;color: black;" href="./users.php">Users</a>
-            </h2>
-            <!--Dashboard ITEM 4 - Queries -->
-            <h2 class="dashitem">
-                <a style="text-decoration: none;color: black;" href="./cxqueries.php">Queries</a>
-            </h2>
-            <!--Dashboard ITEM 5 - Wallet -->
-            <h2 class="dashitem">
-                Wallet
-            </h2>
-            </div>
+                </div>
+                    <!--Dashboard ITEM 2 - Orders -->
+                    <h2 class="dashitem">
+                        <a style="text-decoration: none;color: black;" href="./allorders.php">Orders</a>
+                    </h2>
+                    <!--Dashboard ITEM 3 - Users -->
+                    <h2 class="dashitem">
+                        <a style="text-decoration: none;color: black;" href="./users.php">Users</a>
+                    </h2>
+                    <!--Dashboard ITEM 4 - Queries -->
+                    <h2 class="dashitem">
+                        <a style="text-decoration: none;color: black;" href="./cxqueries.php">Queries</a>
+                    </h2>
+                    <!--Dashboard ITEM 5 - Wallet -->
+                    <h2 class="dashitem">
+                        Wallet
+                    </h2>
+                </div>
 
         <!-- Operations Area-------------------------------------------------------------------------------------------------->
         <div class="adminops">
-            <?php echo 'Nothing here yet! Check back later for customer queries. <span><a href=\'../lollipop.php\'>Go back to the Dashboard</a></span>'?>
+            <?php            
+                $tableName = $_POST['table_name'];
+
+                if(isset($_POST['vieworder'])){
+                        
+                    $query = "SELECT * FROM $tableName";
+                    $stmt = $db->prepare($query);
+                    $stmt->execute();
+                    $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    $address = array();
+
+                    $query = "SELECT SUM(good_price) AS TotalPrice FROM $tableName";
+                    $stmt = $db->prepare($query);
+                    $stmt->execute();
+                    $row2 = $stmt->fetchALl(PDO::FETCH_ASSOC);
+
+                    foreach($row as $r) {
+                        $address[] = $r['user_address'];
+                    }
+
+                    echo '<div><table>';
+                    echo '<tr style=\'font-weight:bold;font-size:1.3em\'><td>Products</td><td>Product Price</td>';
+                    foreach($row as $r) {
+                        echo '<tr><td>'.$r['good_name'].'</td><td>'.$r['good_price'].'</td><tr>';
+                    }
+                    foreach($row2 as $r2){
+                        echo '<tr><td>Total Price : </td><td>'.$r2['TotalPrice'].'</td></tr>';
+                    }
+                    echo '<tr><td> To be delivered at : '.$address[0].'</td></tr>';
+                    echo '</table></div>';
+                };
+
+                if(isset($_POST['completeorder'])){
+                    $query = "DROP TABLE $tableName";
+                    $stmt = $db->prepare($query);
+                    $stmt->execute();
+                    $stmt->closeCursor();
+                    
+                    echo 'Order Successfully Completed. Please <span><a href=\'allorders.php\'>click here</a></span> to finish other orders. Thank you!';
+                };
+            ?>
         </div>
     </main>
 </body>

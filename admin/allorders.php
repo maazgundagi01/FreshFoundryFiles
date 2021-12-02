@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
+            <a href="../indexloggedin.php"><img src="../Assets/Images/FreshLogo0.3.png" alt=""></a>
         </div>
         <div class="shadow-box">
             <div class="searchbar">
@@ -139,13 +139,13 @@
 
             // var_dump($orderby);
             
-            echo '<div><form action=\'\' method=\'POST\'><table>';
+            echo '<div><table>';
             echo '<tr style=\'font-weight:bold;font-size:1.2em;\'><td>Pending Orders</td>';
             echo '<td style="text-align:center">Actions</td></tr>';
             foreach($row as $r){
-                echo '<tr><td>'.$r['Tables_in_freshfoundry (%orders%)'].'</td><td style="text-align:center;"><input style="margin:0 2em 0 5em;padding:5px 15px;border:none;border-radius:10px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)" type="submit" name="vieworder" value="View Order"><input style="margin:0 2em;padding: 5px 15px;border:none;border-radius:10px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)" type="submit" name="completeorder" value="Order Completed"></td></tr>';
+                echo '<form action=\'vieworder.php\' method=\'POST\'><tr><input type=\'hidden\' name=\'table_name\' value=\''.$r['Tables_in_freshfoundry (%orders%)'].'\'><td>'.$r['Tables_in_freshfoundry (%orders%)'].'</td><td style="text-align:center;"><input style="margin:0 2em 0 5em;padding:5px 15px;border:none;border-radius:10px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)" type="submit" name="vieworder" value="View Order"><input style="margin:0 2em;padding: 5px 15px;border:none;border-radius:10px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)" type="submit" name="completeorder" value="Order Completed"></td></tr></form>';
             }
-            echo '</table></form><div>';
+            echo '</table><div>';
 
             
             // echo '<td><input type=\'submit\' value=\'Open Order\' name=\'orderview\'></td>';
