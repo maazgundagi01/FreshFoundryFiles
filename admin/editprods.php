@@ -6,8 +6,7 @@ $gName = trim(strtolower($_POST['goods_name']));
 $pId = $_POST['prod_id'];
 $img = '../uploads/'.$_POST['image'];
 
-if($_POST['delete']){
-    if($pId === 'ff-fp-01'){
+if($pId === 'ff-fp-01'){
         $query = "DELETE FROM fresh_produce WHERE goods='$gName'";
         $stmt = $db->prepare($query);
         $stmt->execute();
@@ -70,7 +69,6 @@ if($_POST['delete']){
 
         header('location:a_beverages.php');
     }
-};
 
 
 ?>

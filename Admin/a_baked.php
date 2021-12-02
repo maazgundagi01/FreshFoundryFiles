@@ -122,12 +122,12 @@
                 $stmt->execute();
                 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                echo '<div style=\'margin-top:2em;text-align:center\'><form action=\'editprods.php\' method=\'POST\'><table>';
+                echo '<div style=\'margin-top:2em;text-align:center\'><table>';
                 echo '<tr style=\'font-weight:bold;\'><td>Good\'s Name</td><td>Good\'s ID</td><td>Product ID</td><td>Prices</td><td>Image</td><td>Action</td></tr>';
                 foreach($row as $r){
-                    echo '<tr><input type=\'hidden\' name=\'goods_name\' value=\''.$r['goods'].'\'><td>'.$r['goods'].'</td><td>'.$r['goods_id'].'</td><input type=\'hidden\' name=\'prod_id\' value=\''.$r['prod_id'].'\'><td>'.$r['prod_id'].'</td><td>'.$r['price'].'</td><input type=\'hidden\' name=\'image\' value=\''.$r['image'].'\'><td><img style=\'width:100px;height:100px;object-fit:contain\' src=\'../uploads/'.$r['image'].'\'></td><td><input style=\'margin:1em;padding:.8em;border-radius:10px;border:none;box-shadow: 2px 2px 5px rgba(0,0,0,0.3);\' type=\'submit\' name=\'delete\' value=\'Delete entry\'></td></tr>';
+                    echo '<form action=\'editprods.php\' method=\'POST\'><tr><input type=\'hidden\' name=\'goods_name\' value=\''.$r['goods'].'\'><td>'.$r['goods'].'</td><td>'.$r['goods_id'].'</td><input type=\'hidden\' name=\'prod_id\' value=\''.$r['prod_id'].'\'><td>'.$r['prod_id'].'</td><td>'.$r['price'].'</td><input type=\'hidden\' name=\'image\' value=\''.$r['image'].'\'><td><img style=\'width:100px;height:100px;object-fit:contain\' src=\'../uploads/'.$r['image'].'\'></td><td><input style=\'margin:1em;padding:.8em;border-radius:10px;border:none;box-shadow: 2px 2px 5px rgba(0,0,0,0.3);\' type=\'submit\' name=\'delete\' value=\'Delete entry\'></td></tr></form>';
                 }
-                echo '</table></form></div>';
+                echo '</table></div>';
             ?>
         </div>
     </main>
