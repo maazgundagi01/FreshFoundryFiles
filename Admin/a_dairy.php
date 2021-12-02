@@ -1,3 +1,7 @@
+<?php
+    @include'../dbadmin.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,6 +113,21 @@
                 <div><button type="submit" class="submit" style="width:7rem; height:2rem;" >Submit</button><div>
                 </div>
             </form>
+        </div>
+        <div class="prods">
+            <?php
+                $query = "SELECT * FROM dairy";
+                $stmt = $db->prepare($query);
+                $stmt->execute();
+                $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                echo '<div style=\'margin-top:2em;text-align:center\'><form action=\'editprods.php\' method=\'POST\'><table>';
+                echo '<tr><td>Serial Number</td><td>Good Name</td><td>Good ID</td><td>Product ID</td><td>Prices</td><td>Image</td><td>Action</td><tr>';
+                foreach($row as $r){
+                    echo '<tr><td>'.$r['sr_no'].'</td><td name=\'goods_name\'>'.$r['goods'].'</td><td>'.$r['goods_id'].'</td><td name=\'prod_id\'>'.$r['prod_id'].'</td><td>'.$r['price'].'</td><td><img style=\'width:100px;height:100px;object-fit:contain\' src=\'../uploads/'.$r['image'].'\'></td><td><input style=\'margin:1em;padding:.2em\' type=\'submit\' value=\'Update\'><input style=\'margin:1em;padding:.2em\' type=\'submit\' value=\'Delete\'></td></tr>';
+                }
+                echo '</table></form></div>';
+            ?>
         </div>
     </main>
 </body>
