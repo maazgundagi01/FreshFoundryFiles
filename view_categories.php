@@ -1,9 +1,7 @@
-
 <?php
-
 $dsn = 'mysql:host=localhost;dbname=freshfoundry';
 $username = 'root';
-$password = '';
+$password = 'abcd#1234';
 
 
 try {

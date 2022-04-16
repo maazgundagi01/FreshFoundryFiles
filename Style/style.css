@@ -281,6 +281,7 @@ header {
 .productpageitems{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .accordion-body > a{
 text-decoration: none;

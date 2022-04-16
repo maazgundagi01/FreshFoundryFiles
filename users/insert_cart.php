@@ -2,8 +2,8 @@
 if($_COOKIE["user_cookie"]) {
     
     $dsn = 'mysql:host=localhost;dbname=freshfoundry';
-    $username = 'root';
-    $password = '';
+$username = 'root';
+$password = 'abcd#1234';
 
 
     try {
@@ -33,8 +33,3 @@ else {
 }
 
 ?>
-
-
-
-
-
